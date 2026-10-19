@@ -1,0 +1,3027 @@
+{
+  "version": 1,
+  "tags": [
+    "Mobile Service",
+    "Emergency 24/7",
+    "Barn Calls",
+    "Online Booking",
+    "Free Consultation",
+    "Show Season Support",
+    "Insured & Licensed",
+    "Bilingual (EN/ES)",
+    "Weekend Availability",
+    "Payment Plans",
+    "Group Discounts",
+    "Certified Professional"
+  ],
+  "listings": [
+    {
+      "demo_id": "demo-001",
+      "provider_name": "Silver Horse Co.",
+      "category": "Bits and bridle fitting",
+      "category_parent": "Horse Health & Care",
+      "services": [
+        "Insured & Licensed",
+        "Mobile Service",
+        "Group Discounts",
+        "Emergency 24/7"
+      ],
+      "short_description": "Personal, horse-first bits and bridle fitting in the New York area.",
+      "full_description": "Silver Horse Co. has worked with horses and riders around New York for more than 11 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Travel within 50 miles",
+        "Digital records & photos",
+        "Emergency call-outs"
+      ],
+      "location": {
+        "address": "3667 Cedar Ln, New York, NY 10095, USA",
+        "city": "New York, NY",
+        "lat": 40.692749,
+        "lng": -73.94238
+      },
+      "contact": {
+        "phone": "(212) 555-0103",
+        "email": "hello@silverhorseco.example.com"
+      },
+      "date": "2026-09-07 18:44:00"
+    },
+    {
+      "demo_id": "demo-002",
+      "provider_name": "Stone Bridge Services",
+      "category": "Horse Show Officials",
+      "category_parent": "Equine Services, Media & Events",
+      "services": [
+        "Online Booking",
+        "Show Season Support"
+      ],
+      "short_description": "New York's go-to horse show officials for show and pleasure horses.",
+      "full_description": "At Stone Bridge Services every horse is treated like our own. Our team offers horse show officials services for pleasure riders, amateurs and professionals across the New York area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Same-week appointments",
+        "Flexible scheduling",
+        "Works with your vet and farrier"
+      ],
+      "location": {
+        "address": "4567 Main St, New York, NY 10098, USA",
+        "city": "New York, NY",
+        "lat": 40.791215,
+        "lng": -73.950035
+      },
+      "contact": {
+        "phone": "(212) 555-0145",
+        "email": "hello@stonebridgeservices.example.com"
+      },
+      "date": "2026-06-20 12:51:00"
+    },
+    {
+      "demo_id": "demo-003",
+      "provider_name": "Riverbend Services",
+      "category": "Acupuncture & Alternative Therapies",
+      "category_parent": "Horse Health & Care",
+      "services": [
+        "Online Booking",
+        "Emergency 24/7",
+        "Mobile Service",
+        "Certified Professional"
+      ],
+      "short_description": "Personal, horse-first acupuncture & alternative therapies in the New York area.",
+      "full_description": "At Riverbend Services every horse is treated like our own. Our team offers acupuncture & alternative therapies services for pleasure riders, amateurs and professionals across the New York area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Same-week appointments",
+        "Travel within 50 miles",
+        "Works with your vet and farrier",
+        "Flexible scheduling"
+      ],
+      "location": {
+        "address": "2055 Broadway, New York, NY 10011, USA",
+        "city": "New York, NY",
+        "lat": 40.755686,
+        "lng": -73.926407
+      },
+      "contact": {
+        "phone": "(212) 555-0135",
+        "email": "hello@riverbendservices.example.com"
+      },
+      "date": "2026-08-21 13:10:00"
+    },
+    {
+      "demo_id": "demo-004",
+      "provider_name": "Pine Valley Farm",
+      "category": "Lawyers and Counsels",
+      "category_parent": "Equine Services, Media & Events",
+      "services": [
+        "Insured & Licensed",
+        "Free Consultation",
+        "Weekend Availability"
+      ],
+      "short_description": "Friendly, reliable lawyers and counsels for riders and horses in New York.",
+      "full_description": "Pine Valley Farm has worked with horses and riders around New York for more than 25 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Experienced with young horses",
+        "Follow-up call included",
+        "Free initial consultation"
+      ],
+      "location": {
+        "address": "4384 Maple Dr, New York, NY 10078, USA",
+        "city": "New York, NY",
+        "lat": 40.767297,
+        "lng": -73.979555
+      },
+      "contact": {
+        "phone": "(212) 555-0129",
+        "email": "hello@pinevalleyfarm.example.com"
+      },
+      "date": "2026-01-26 13:25:00"
+    },
+    {
+      "demo_id": "demo-005",
+      "provider_name": "Blue Ridge Farm",
+      "category": "Horse Transport / Shipper",
+      "category_parent": "Barns, Breeding & Transport",
+      "services": [
+        "Barn Calls",
+        "Online Booking",
+        "Weekend Availability"
+      ],
+      "short_description": "Professional horse transport / shipper with over 22 years of experience.",
+      "full_description": "Blue Ridge Farm has worked with horses and riders around New York for more than 22 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Show-day support",
+        "Emergency call-outs",
+        "Flexible scheduling",
+        "Experienced with young horses",
+        "Follow-up call included"
+      ],
+      "location": {
+        "address": "5165 Washington Blvd, New York, NY 10084, USA",
+        "city": "New York, NY",
+        "lat": 40.748292,
+        "lng": -73.916457
+      },
+      "contact": {
+        "phone": "(212) 555-0128",
+        "email": "hello@blueridgefarm.example.com"
+      },
+      "date": "2026-03-17 15:05:00"
+    },
+    {
+      "demo_id": "demo-006",
+      "provider_name": "Willow Equestrian",
+      "category": "Rehabilitation & Therapy",
+      "category_parent": "Horse Health & Care",
+      "services": [
+        "Weekend Availability",
+        "Mobile Service",
+        "Emergency 24/7"
+      ],
+      "short_description": "Professional rehabilitation & therapy with over 24 years of experience.",
+      "full_description": "Founded in 2002, Willow Equestrian is a rehabilitation & therapy business built on experience and repeat clients. We travel to barns throughout New York and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Digital records & photos",
+        "Show-day support",
+        "Follow-up call included",
+        "Same-week appointments",
+        "Experienced with young horses"
+      ],
+      "location": {
+        "address": "2631 Mill Rd, New York, NY 10077, USA",
+        "city": "New York, NY",
+        "lat": 40.687294,
+        "lng": -74.007009
+      },
+      "contact": {
+        "phone": "(212) 555-0155",
+        "email": "hello@willowequestrian.example.com"
+      },
+      "date": "2026-03-15 08:46:00"
+    },
+    {
+      "demo_id": "demo-007",
+      "provider_name": "Northstar Equestrian",
+      "category": "Stallion / Foaling Services",
+      "category_parent": "Barns, Breeding & Transport",
+      "services": [
+        "Weekend Availability",
+        "Mobile Service",
+        "Payment Plans",
+        "Show Season Support"
+      ],
+      "short_description": "New York's go-to stallion / foaling services for show and pleasure horses.",
+      "full_description": "Northstar Equestrian has worked with horses and riders around New York for more than 20 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Free initial consultation",
+        "Same-week appointments",
+        "Follow-up call included",
+        "Show-day support"
+      ],
+      "location": {
+        "address": "1753 Meadow Ln, New York, NY 10082, USA",
+        "city": "New York, NY",
+        "lat": 40.749473,
+        "lng": -74.039896
+      },
+      "contact": {
+        "phone": "(212) 555-0130",
+        "email": "hello@northstarequestrian.example.com"
+      },
+      "date": "2026-01-08 17:05:00"
+    },
+    {
+      "demo_id": "demo-008",
+      "provider_name": "Blue Ridge Studio",
+      "category": "Braiding",
+      "category_parent": "Horse Health & Care",
+      "services": [
+        "Insured & Licensed",
+        "Online Booking",
+        "Weekend Availability",
+        "Group Discounts"
+      ],
+      "short_description": "New York's go-to braiding for show and pleasure horses.",
+      "full_description": "Founded in 1998, Blue Ridge Studio is a braiding business built on experience and repeat clients. We travel to barns throughout New York and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Show-day support",
+        "Flexible scheduling",
+        "Follow-up call included",
+        "Package pricing available",
+        "Digital records & photos"
+      ],
+      "location": {
+        "address": "2070 Cedar Ln, New York, NY 10085, USA",
+        "city": "New York, NY",
+        "lat": 40.74494,
+        "lng": -73.976735
+      },
+      "contact": {
+        "phone": "(212) 555-0115",
+        "email": "hello@blueridgestudio.example.com"
+      },
+      "date": "2026-04-08 09:21:00"
+    },
+    {
+      "demo_id": "demo-009",
+      "provider_name": "Bluegrass Studio",
+      "category": "Equine Dentist",
+      "category_parent": "Horse Health & Care",
+      "services": [
+        "Show Season Support",
+        "Emergency 24/7"
+      ],
+      "short_description": "Friendly, reliable equine dentist for riders and horses in New York.",
+      "full_description": "Bluegrass Studio has worked with horses and riders around New York for more than 11 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Travel within 50 miles",
+        "Show-day support",
+        "Package pricing available",
+        "Works with your vet and farrier",
+        "Written report after every visit"
+      ],
+      "location": {
+        "address": "9651 Lake Rd, New York, NY 10001, USA",
+        "city": "New York, NY",
+        "lat": 40.688339,
+        "lng": -73.962101
+      },
+      "contact": {
+        "phone": "(212) 555-0192",
+        "email": "hello@bluegrassstudio.example.com"
+      },
+      "date": "2026-08-08 15:51:00"
+    },
+    {
+      "demo_id": "demo-010",
+      "provider_name": "Red Barn Stables",
+      "category": "Horse Show / Event Management",
+      "category_parent": "Equine Services, Media & Events",
+      "services": [
+        "Group Discounts",
+        "Emergency 24/7",
+        "Mobile Service",
+        "Insured & Licensed"
+      ],
+      "short_description": "Trusted horse show / event management serving New York and surrounding barns.",
+      "full_description": "Founded in 2019, Red Barn Stables is a horse show / event management business built on experience and repeat clients. We travel to barns throughout New York and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Follow-up call included",
+        "Same-week appointments",
+        "Travel within 50 miles",
+        "Emergency call-outs",
+        "Digital records & photos"
+      ],
+      "location": {
+        "address": "7072 Sunset Blvd, New York, NY 10055, USA",
+        "city": "New York, NY",
+        "lat": 40.735954,
+        "lng": -73.920209
+      },
+      "contact": {
+        "phone": "(212) 555-0168",
+        "email": "hello@redbarnstables.example.com"
+      },
+      "date": "2026-08-05 14:11:00"
+    },
+    {
+      "demo_id": "demo-011",
+      "provider_name": "Harbor Farm",
+      "category": "International Horse Shipping",
+      "category_parent": "Barns, Breeding & Transport",
+      "services": [
+        "Barn Calls",
+        "Insured & Licensed"
+      ],
+      "short_description": "Trusted international horse shipping serving New York and surrounding barns.",
+      "full_description": "Harbor Farm has worked with horses and riders around New York for more than 6 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Package pricing available",
+        "Travel within 50 miles",
+        "Flexible scheduling",
+        "Free initial consultation"
+      ],
+      "location": {
+        "address": "7270 Forest Dr, New York, NY 10013, USA",
+        "city": "New York, NY",
+        "lat": 40.685482,
+        "lng": -73.895829
+      },
+      "contact": {
+        "phone": "(212) 555-0121",
+        "email": "hello@harborfarm.example.com"
+      },
+      "date": "2026-07-01 14:16:00"
+    },
+    {
+      "demo_id": "demo-012",
+      "provider_name": "Meadowbrook Group",
+      "category": "Feed & Hay Suppliers",
+      "category_parent": "Retail and Businesses",
+      "services": [
+        "Weekend Availability",
+        "Mobile Service",
+        "Show Season Support",
+        "Group Discounts"
+      ],
+      "short_description": "Trusted feed & hay suppliers serving New York and surrounding barns.",
+      "full_description": "Founded in 2000, Meadowbrook Group is a feed & hay suppliers business built on experience and repeat clients. We travel to barns throughout New York and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Emergency call-outs",
+        "Package pricing available",
+        "Digital records & photos"
+      ],
+      "location": {
+        "address": "9115 River Rd, New York, NY 10020, USA",
+        "city": "New York, NY",
+        "lat": 40.704986,
+        "lng": -74.036514
+      },
+      "contact": {
+        "phone": "(212) 555-0167",
+        "email": "hello@meadowbrookgroup.example.com"
+      },
+      "date": "2026-03-02 16:05:00"
+    },
+    {
+      "demo_id": "demo-013",
+      "provider_name": "Blue Ridge Partners",
+      "category": "Horsemanship & Behavior",
+      "category_parent": "Training & Riding",
+      "services": [
+        "Payment Plans",
+        "Emergency 24/7"
+      ],
+      "short_description": "Personal, horse-first horsemanship & behavior in the New York area.",
+      "full_description": "Founded in 2020, Blue Ridge Partners is a horsemanship & behavior business built on experience and repeat clients. We travel to barns throughout New York and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Experienced with young horses",
+        "Emergency call-outs",
+        "Works with your vet and farrier",
+        "Digital records & photos"
+      ],
+      "location": {
+        "address": "3863 Broadway, New York, NY 10016, USA",
+        "city": "New York, NY",
+        "lat": 40.810223,
+        "lng": -73.973158
+      },
+      "contact": {
+        "phone": "(212) 555-0140",
+        "email": "hello@blueridgepartners.example.com"
+      },
+      "date": "2026-05-07 18:45:00"
+    },
+    {
+      "demo_id": "demo-014",
+      "provider_name": "Stone Bridge Horse Co.",
+      "category": "Portable Stabling / Stall Rental",
+      "category_parent": "Barns, Breeding & Transport",
+      "services": [
+        "Payment Plans",
+        "Certified Professional",
+        "Emergency 24/7"
+      ],
+      "short_description": "Trusted portable stabling / stall rental serving New York and surrounding barns.",
+      "full_description": "Stone Bridge Horse Co. has worked with horses and riders around New York for more than 16 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Digital records & photos",
+        "Travel within 50 miles",
+        "Works with your vet and farrier"
+      ],
+      "location": {
+        "address": "2154 Meadow Ln, New York, NY 10059, USA",
+        "city": "New York, NY",
+        "lat": 40.722665,
+        "lng": -73.940364
+      },
+      "contact": {
+        "phone": "(212) 555-0133",
+        "email": "hello@stonebridgehorseco.example.com"
+      },
+      "date": "2026-03-12 09:56:00"
+    },
+    {
+      "demo_id": "demo-015",
+      "provider_name": "Pine Valley Horse Co.",
+      "category": "Breeding Facilities",
+      "category_parent": "Barns, Breeding & Transport",
+      "services": [
+        "Weekend Availability",
+        "Free Consultation",
+        "Emergency 24/7",
+        "Barn Calls"
+      ],
+      "short_description": "Personal, horse-first breeding facilities in the Washington area.",
+      "full_description": "Pine Valley Horse Co. has worked with horses and riders around Washington for more than 9 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Same-week appointments",
+        "Works with your vet and farrier",
+        "Digital records & photos",
+        "Written report after every visit"
+      ],
+      "location": {
+        "address": "7189 Forest Dr, Washington, DC 20091, USA",
+        "city": "Washington, DC",
+        "lat": 38.879552,
+        "lng": -76.949806
+      },
+      "contact": {
+        "phone": "(202) 555-0134",
+        "email": "hello@pinevalleyhorseco.example.com"
+      },
+      "date": "2026-05-20 11:45:00"
+    },
+    {
+      "demo_id": "demo-016",
+      "provider_name": "Red Barn Horse Co.",
+      "category": "Website Design & Technology",
+      "category_parent": "Equine Services, Media & Events",
+      "services": [
+        "Show Season Support",
+        "Barn Calls"
+      ],
+      "short_description": "Washington's go-to website design & technology for show and pleasure horses.",
+      "full_description": "Red Barn Horse Co. has worked with horses and riders around Washington for more than 20 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Show-day support",
+        "Written report after every visit",
+        "Package pricing available",
+        "Digital records & photos",
+        "Flexible scheduling"
+      ],
+      "location": {
+        "address": "8014 Hillside Ave, Washington, DC 20007, USA",
+        "city": "Washington, DC",
+        "lat": 38.850122,
+        "lng": -77.050656
+      },
+      "contact": {
+        "phone": "(202) 555-0171",
+        "email": "hello@redbarnhorseco.example.com"
+      },
+      "date": "2026-01-04 09:56:00"
+    },
+    {
+      "demo_id": "demo-017",
+      "provider_name": "Fox Run Equine",
+      "category": "Groom",
+      "category_parent": "Training & Riding",
+      "services": [
+        "Show Season Support",
+        "Online Booking"
+      ],
+      "short_description": "Washington's go-to groom for show and pleasure horses.",
+      "full_description": "At Fox Run Equine every horse is treated like our own. Our team offers groom services for pleasure riders, amateurs and professionals across the Washington area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Travel within 50 miles",
+        "Experienced with young horses",
+        "Same-week appointments",
+        "Follow-up call included",
+        "Flexible scheduling"
+      ],
+      "location": {
+        "address": "6059 Spring St, Washington, DC 20071, USA",
+        "city": "Washington, DC",
+        "lat": 38.857933,
+        "lng": -77.10396
+      },
+      "contact": {
+        "phone": "(202) 555-0179",
+        "email": "hello@foxrunequine.example.com"
+      },
+      "date": "2026-03-08 10:51:00"
+    },
+    {
+      "demo_id": "demo-018",
+      "provider_name": "Iron Gate Equine",
+      "category": "Young Horse / Starting Specialists",
+      "category_parent": "Training & Riding",
+      "services": [
+        "Emergency 24/7",
+        "Insured & Licensed",
+        "Mobile Service",
+        "Bilingual (EN/ES)"
+      ],
+      "short_description": "Washington's go-to young horse / starting specialists for show and pleasure horses.",
+      "full_description": "Iron Gate Equine has worked with horses and riders around Washington for more than 9 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Travel within 50 miles",
+        "Package pricing available",
+        "Follow-up call included"
+      ],
+      "location": {
+        "address": "5452 Mill Rd, Washington, DC 20086, USA",
+        "city": "Washington, DC",
+        "lat": 38.958169,
+        "lng": -76.980965
+      },
+      "contact": {
+        "phone": "(202) 555-0139",
+        "email": "hello@irongateequine.example.com"
+      },
+      "date": "2026-04-08 08:42:00"
+    },
+    {
+      "demo_id": "demo-019",
+      "provider_name": "Whitehorse & Co.",
+      "category": "Riding Schools / Lesson Programs",
+      "category_parent": "Training & Riding",
+      "services": [
+        "Emergency 24/7",
+        "Free Consultation"
+      ],
+      "short_description": "Personal, horse-first riding schools / lesson programs in the Washington area.",
+      "full_description": "At Whitehorse & Co. every horse is treated like our own. Our team offers riding schools / lesson programs services for pleasure riders, amateurs and professionals across the Washington area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Emergency call-outs",
+        "Show-day support",
+        "Free initial consultation"
+      ],
+      "location": {
+        "address": "1147 Hillside Ave, Washington, DC 20045, USA",
+        "city": "Washington, DC",
+        "lat": 38.927007,
+        "lng": -77.054958
+      },
+      "contact": {
+        "phone": "(202) 555-0113",
+        "email": "hello@whitehorseandco.example.com"
+      },
+      "date": "2026-07-12 13:27:00"
+    },
+    {
+      "demo_id": "demo-020",
+      "provider_name": "Willow Group",
+      "category": "Equine Product Retailers",
+      "category_parent": "Retail and Businesses",
+      "services": [
+        "Certified Professional",
+        "Group Discounts",
+        "Online Booking",
+        "Show Season Support"
+      ],
+      "short_description": "Personal, horse-first equine product retailers in the Washington area.",
+      "full_description": "Founded in 2004, Willow Group is a equine product retailers business built on experience and repeat clients. We travel to barns throughout Washington and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Same-week appointments",
+        "Experienced with young horses",
+        "Follow-up call included",
+        "Emergency call-outs"
+      ],
+      "location": {
+        "address": "3124 Hillside Ave, Washington, DC 20006, USA",
+        "city": "Washington, DC",
+        "lat": 38.93643,
+        "lng": -77.126596
+      },
+      "contact": {
+        "phone": "(202) 555-0184",
+        "email": "hello@willowgroup.example.com"
+      },
+      "date": "2026-02-24 12:32:00"
+    },
+    {
+      "demo_id": "demo-021",
+      "provider_name": "Wildflower Group",
+      "category": "Farm Maintenance",
+      "category_parent": "Barns, Breeding & Transport",
+      "services": [
+        "Barn Calls",
+        "Payment Plans",
+        "Group Discounts",
+        "Free Consultation"
+      ],
+      "short_description": "Professional farm maintenance with over 14 years of experience.",
+      "full_description": "Founded in 2012, Wildflower Group is a farm maintenance business built on experience and repeat clients. We travel to barns throughout Washington and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Digital records & photos",
+        "Free initial consultation",
+        "Show-day support",
+        "Emergency call-outs"
+      ],
+      "location": {
+        "address": "6602 Meadow Ln, Washington, DC 20071, USA",
+        "city": "Washington, DC",
+        "lat": 38.85502,
+        "lng": -77.05122
+      },
+      "contact": {
+        "phone": "(202) 555-0126",
+        "email": "hello@wildflowergroup.example.com"
+      },
+      "date": "2026-07-26 17:38:00"
+    },
+    {
+      "demo_id": "demo-022",
+      "provider_name": "Harbor Services",
+      "category": "Photography & Videography",
+      "category_parent": "Equine Services, Media & Events",
+      "services": [
+        "Free Consultation",
+        "Weekend Availability"
+      ],
+      "short_description": "Friendly, reliable photography & videography for riders and horses in Washington.",
+      "full_description": "Founded in 2008, Harbor Services is a photography & videography business built on experience and repeat clients. We travel to barns throughout Washington and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Experienced with young horses",
+        "Emergency call-outs",
+        "Follow-up call included",
+        "Same-week appointments",
+        "Travel within 50 miles"
+      ],
+      "location": {
+        "address": "3511 Highland Ave, Washington, DC 20061, USA",
+        "city": "Washington, DC",
+        "lat": 38.948323,
+        "lng": -76.95413
+      },
+      "contact": {
+        "phone": "(202) 555-0186",
+        "email": "hello@harborservices.example.com"
+      },
+      "date": "2026-05-08 11:09:00"
+    },
+    {
+      "demo_id": "demo-023",
+      "provider_name": "Golden Farm",
+      "category": "Equine Bodywork & Massage",
+      "category_parent": "Horse Health & Care",
+      "services": [
+        "Online Booking",
+        "Barn Calls",
+        "Mobile Service"
+      ],
+      "short_description": "Professional equine bodywork & massage with over 19 years of experience.",
+      "full_description": "At Golden Farm every horse is treated like our own. Our team offers equine bodywork & massage services for pleasure riders, amateurs and professionals across the Washington area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Flexible scheduling",
+        "Travel within 50 miles",
+        "Written report after every visit"
+      ],
+      "location": {
+        "address": "1203 Church St, Washington, DC 20054, USA",
+        "city": "Washington, DC",
+        "lat": 38.961259,
+        "lng": -77.023279
+      },
+      "contact": {
+        "phone": "(202) 555-0189",
+        "email": "hello@goldenfarm.example.com"
+      },
+      "date": "2026-09-15 08:35:00"
+    },
+    {
+      "demo_id": "demo-024",
+      "provider_name": "Willow Services",
+      "category": "Breeding Facilities",
+      "category_parent": "Barns, Breeding & Transport",
+      "services": [
+        "Weekend Availability",
+        "Insured & Licensed",
+        "Certified Professional",
+        "Bilingual (EN/ES)"
+      ],
+      "short_description": "Professional breeding facilities with over 8 years of experience.",
+      "full_description": "Founded in 2018, Willow Services is a breeding facilities business built on experience and repeat clients. We travel to barns throughout Washington and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Works with your vet and farrier",
+        "Package pricing available",
+        "Experienced with young horses"
+      ],
+      "location": {
+        "address": "7622 Highland Ave, Washington, DC 20072, USA",
+        "city": "Washington, DC",
+        "lat": 38.920563,
+        "lng": -76.955893
+      },
+      "contact": {
+        "phone": "(202) 555-0133",
+        "email": "hello@willowservices.example.com"
+      },
+      "date": "2026-04-27 18:17:00"
+    },
+    {
+      "demo_id": "demo-025",
+      "provider_name": "Liberty Farm",
+      "category": "Horse Sales & Consignment",
+      "category_parent": "Retail and Businesses",
+      "services": [
+        "Barn Calls",
+        "Certified Professional"
+      ],
+      "short_description": "Washington's go-to horse sales & consignment for show and pleasure horses.",
+      "full_description": "Founded in 2014, Liberty Farm is a horse sales & consignment business built on experience and repeat clients. We travel to barns throughout Washington and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Flexible scheduling",
+        "Written report after every visit",
+        "Travel within 50 miles"
+      ],
+      "location": {
+        "address": "7216 Maple Dr, Washington, DC 20092, USA",
+        "city": "Washington, DC",
+        "lat": 38.877202,
+        "lng": -77.077991
+      },
+      "contact": {
+        "phone": "(202) 555-0108",
+        "email": "hello@libertyfarm.example.com"
+      },
+      "date": "2026-07-14 13:34:00"
+    },
+    {
+      "demo_id": "demo-026",
+      "provider_name": "Red Barn Group",
+      "category": "Supplements & Health Products",
+      "category_parent": "Retail and Businesses",
+      "services": [
+        "Insured & Licensed",
+        "Weekend Availability",
+        "Group Discounts"
+      ],
+      "short_description": "Washington's go-to supplements & health products for show and pleasure horses.",
+      "full_description": "At Red Barn Group every horse is treated like our own. Our team offers supplements & health products services for pleasure riders, amateurs and professionals across the Washington area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Travel within 50 miles",
+        "Package pricing available",
+        "Works with your vet and farrier",
+        "Show-day support",
+        "Flexible scheduling"
+      ],
+      "location": {
+        "address": "9579 Main St, Washington, DC 20098, USA",
+        "city": "Washington, DC",
+        "lat": 38.917797,
+        "lng": -77.041044
+      },
+      "contact": {
+        "phone": "(202) 555-0162",
+        "email": "hello@redbarngroup.example.com"
+      },
+      "date": "2026-01-13 13:42:00"
+    },
+    {
+      "demo_id": "demo-027",
+      "provider_name": "Riverbend Equestrian",
+      "category": "Equine Appraisor",
+      "category_parent": "Equine Services, Media & Events",
+      "services": [
+        "Mobile Service",
+        "Emergency 24/7",
+        "Insured & Licensed",
+        "Barn Calls"
+      ],
+      "short_description": "Personal, horse-first equine appraisor in the Los Angeles area.",
+      "full_description": "Founded in 1996, Riverbend Equestrian is a equine appraisor business built on experience and repeat clients. We travel to barns throughout Los Angeles and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Written report after every visit",
+        "Free initial consultation",
+        "Show-day support",
+        "Flexible scheduling"
+      ],
+      "location": {
+        "address": "7667 Cedar Ln, Los Angeles, CA 90080, USA",
+        "city": "Los Angeles, CA",
+        "lat": 34.056977,
+        "lng": -118.170453
+      },
+      "contact": {
+        "phone": "(213) 555-0141",
+        "email": "hello@riverbendequestrian.example.com"
+      },
+      "date": "2026-04-15 13:21:00"
+    },
+    {
+      "demo_id": "demo-028",
+      "provider_name": "Clover Group",
+      "category": "Accounting & Bookkeeping",
+      "category_parent": "Equine Services, Media & Events",
+      "services": [
+        "Emergency 24/7",
+        "Group Discounts",
+        "Mobile Service",
+        "Payment Plans"
+      ],
+      "short_description": "Los Angeles's go-to accounting & bookkeeping for show and pleasure horses.",
+      "full_description": "Clover Group has worked with horses and riders around Los Angeles for more than 12 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Travel within 50 miles",
+        "Free initial consultation",
+        "Emergency call-outs"
+      ],
+      "location": {
+        "address": "1351 River Rd, Los Angeles, CA 90003, USA",
+        "city": "Los Angeles, CA",
+        "lat": 34.087063,
+        "lng": -118.324325
+      },
+      "contact": {
+        "phone": "(213) 555-0119",
+        "email": "hello@clovergroup.example.com"
+      },
+      "date": "2026-04-05 15:42:00"
+    },
+    {
+      "demo_id": "demo-029",
+      "provider_name": "Bluegrass Farm",
+      "category": "Bits and bridle fitting",
+      "category_parent": "Horse Health & Care",
+      "services": [
+        "Emergency 24/7",
+        "Payment Plans",
+        "Mobile Service"
+      ],
+      "short_description": "Trusted bits and bridle fitting serving Los Angeles and surrounding barns.",
+      "full_description": "Bluegrass Farm has worked with horses and riders around Los Angeles for more than 18 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Emergency call-outs",
+        "Experienced with young horses",
+        "Flexible scheduling",
+        "Works with your vet and farrier"
+      ],
+      "location": {
+        "address": "4208 Sunset Blvd, Los Angeles, CA 90022, USA",
+        "city": "Los Angeles, CA",
+        "lat": 34.067025,
+        "lng": -118.160228
+      },
+      "contact": {
+        "phone": "(213) 555-0191",
+        "email": "hello@bluegrassfarm.example.com"
+      },
+      "date": "2026-04-03 17:44:00"
+    },
+    {
+      "demo_id": "demo-030",
+      "provider_name": "Willow Horse Co.",
+      "category": "Breeding Facilities",
+      "category_parent": "Barns, Breeding & Transport",
+      "services": [
+        "Group Discounts",
+        "Show Season Support",
+        "Mobile Service",
+        "Insured & Licensed"
+      ],
+      "short_description": "Los Angeles's go-to breeding facilities for show and pleasure horses.",
+      "full_description": "Willow Horse Co. has worked with horses and riders around Los Angeles for more than 25 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Same-week appointments",
+        "Flexible scheduling",
+        "Follow-up call included",
+        "Package pricing available"
+      ],
+      "location": {
+        "address": "1993 Spring St, Los Angeles, CA 90006, USA",
+        "city": "Los Angeles, CA",
+        "lat": 34.030809,
+        "lng": -118.256592
+      },
+      "contact": {
+        "phone": "(213) 555-0190",
+        "email": "hello@willowhorseco.example.com"
+      },
+      "date": "2026-03-14 10:46:00"
+    },
+    {
+      "demo_id": "demo-031",
+      "provider_name": "Twin Oaks Horse Co.",
+      "category": "Horse Sales & Consignment",
+      "category_parent": "Retail and Businesses",
+      "services": [
+        "Emergency 24/7",
+        "Free Consultation"
+      ],
+      "short_description": "Los Angeles's go-to horse sales & consignment for show and pleasure horses.",
+      "full_description": "At Twin Oaks Horse Co. every horse is treated like our own. Our team offers horse sales & consignment services for pleasure riders, amateurs and professionals across the Los Angeles area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Travel within 50 miles",
+        "Package pricing available",
+        "Emergency call-outs",
+        "Flexible scheduling"
+      ],
+      "location": {
+        "address": "8827 River Rd, Los Angeles, CA 90060, USA",
+        "city": "Los Angeles, CA",
+        "lat": 34.04318,
+        "lng": -118.202115
+      },
+      "contact": {
+        "phone": "(213) 555-0143",
+        "email": "hello@twinoakshorseco.example.com"
+      },
+      "date": "2026-01-16 13:11:00"
+    },
+    {
+      "demo_id": "demo-032",
+      "provider_name": "Red Barn & Co.",
+      "category": "Jumps & Arena Equipment Sales / Rental",
+      "category_parent": "Retail and Businesses",
+      "services": [
+        "Weekend Availability",
+        "Online Booking"
+      ],
+      "short_description": "Los Angeles's go-to jumps & arena equipment sales / rental for show and pleasure horses.",
+      "full_description": "Founded in 1997, Red Barn & Co. is a jumps & arena equipment sales / rental business built on experience and repeat clients. We travel to barns throughout Los Angeles and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Travel within 50 miles",
+        "Flexible scheduling",
+        "Package pricing available"
+      ],
+      "location": {
+        "address": "4242 Ridge Rd, Los Angeles, CA 90036, USA",
+        "city": "Los Angeles, CA",
+        "lat": 34.105445,
+        "lng": -118.207487
+      },
+      "contact": {
+        "phone": "(213) 555-0171",
+        "email": "hello@redbarnandco.example.com"
+      },
+      "date": "2026-04-23 15:41:00"
+    },
+    {
+      "demo_id": "demo-033",
+      "provider_name": "Harbor Equine",
+      "category": "Jumps & Arena Equipment Sales / Rental",
+      "category_parent": "Retail and Businesses",
+      "services": [
+        "Weekend Availability",
+        "Certified Professional",
+        "Show Season Support"
+      ],
+      "short_description": "Personal, horse-first jumps & arena equipment sales / rental in the Los Angeles area.",
+      "full_description": "At Harbor Equine every horse is treated like our own. Our team offers jumps & arena equipment sales / rental services for pleasure riders, amateurs and professionals across the Los Angeles area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Works with your vet and farrier",
+        "Digital records & photos",
+        "Follow-up call included",
+        "Emergency call-outs"
+      ],
+      "location": {
+        "address": "4830 Lake Rd, Los Angeles, CA 90052, USA",
+        "city": "Los Angeles, CA",
+        "lat": 34.07905,
+        "lng": -118.278583
+      },
+      "contact": {
+        "phone": "(213) 555-0189",
+        "email": "hello@harborequine.example.com"
+      },
+      "date": "2026-08-09 12:16:00"
+    },
+    {
+      "demo_id": "demo-034",
+      "provider_name": "Willow Farm",
+      "category": "Retirement & rescue Facilities",
+      "category_parent": "Barns, Breeding & Transport",
+      "services": [
+        "Payment Plans",
+        "Weekend Availability",
+        "Certified Professional",
+        "Free Consultation"
+      ],
+      "short_description": "Professional retirement & rescue facilities with over 14 years of experience.",
+      "full_description": "At Willow Farm every horse is treated like our own. Our team offers retirement & rescue facilities services for pleasure riders, amateurs and professionals across the Los Angeles area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Travel within 50 miles",
+        "Show-day support",
+        "Works with your vet and farrier"
+      ],
+      "location": {
+        "address": "1968 Forest Dr, Los Angeles, CA 90098, USA",
+        "city": "Los Angeles, CA",
+        "lat": 34.078823,
+        "lng": -118.299223
+      },
+      "contact": {
+        "phone": "(213) 555-0146",
+        "email": "hello@willowfarm.example.com"
+      },
+      "date": "2026-03-10 08:45:00"
+    },
+    {
+      "demo_id": "demo-035",
+      "provider_name": "Clover Equine",
+      "category": "Professional Riders",
+      "category_parent": "Training & Riding",
+      "services": [
+        "Payment Plans",
+        "Free Consultation"
+      ],
+      "short_description": "Professional professional riders with over 5 years of experience.",
+      "full_description": "Clover Equine has worked with horses and riders around Los Angeles for more than 5 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Package pricing available",
+        "Works with your vet and farrier",
+        "Follow-up call included",
+        "Written report after every visit"
+      ],
+      "location": {
+        "address": "9076 Meadow Ln, Los Angeles, CA 90090, USA",
+        "city": "Los Angeles, CA",
+        "lat": 34.114373,
+        "lng": -118.218883
+      },
+      "contact": {
+        "phone": "(213) 555-0106",
+        "email": "hello@cloverequine.example.com"
+      },
+      "date": "2026-05-28 15:07:00"
+    },
+    {
+      "demo_id": "demo-036",
+      "provider_name": "Whitehorse Services",
+      "category": "Saddle Fitting",
+      "category_parent": "Horse Health & Care",
+      "services": [
+        "Emergency 24/7",
+        "Weekend Availability"
+      ],
+      "short_description": "Los Angeles's go-to saddle fitting for show and pleasure horses.",
+      "full_description": "Whitehorse Services has worked with horses and riders around Los Angeles for more than 6 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Emergency call-outs",
+        "Works with your vet and farrier",
+        "Experienced with young horses",
+        "Travel within 50 miles"
+      ],
+      "location": {
+        "address": "9463 Oak Ave, Los Angeles, CA 90020, USA",
+        "city": "Los Angeles, CA",
+        "lat": 34.003088,
+        "lng": -118.232389
+      },
+      "contact": {
+        "phone": "(213) 555-0199",
+        "email": "hello@whitehorseservices.example.com"
+      },
+      "date": "2026-09-13 15:58:00"
+    },
+    {
+      "demo_id": "demo-037",
+      "provider_name": "Meadowbrook Partners",
+      "category": "Consignment shop",
+      "category_parent": "Retail and Businesses",
+      "services": [
+        "Online Booking",
+        "Free Consultation",
+        "Emergency 24/7",
+        "Barn Calls"
+      ],
+      "short_description": "Trusted consignment shop serving Los Angeles and surrounding barns.",
+      "full_description": "Meadowbrook Partners has worked with horses and riders around Los Angeles for more than 17 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Written report after every visit",
+        "Digital records & photos",
+        "Same-week appointments"
+      ],
+      "location": {
+        "address": "5013 Spring St, Los Angeles, CA 90080, USA",
+        "city": "Los Angeles, CA",
+        "lat": 33.990632,
+        "lng": -118.16088
+      },
+      "contact": {
+        "phone": "(213) 555-0120",
+        "email": "hello@meadowbrookpartners.example.com"
+      },
+      "date": "2026-01-14 15:44:00"
+    },
+    {
+      "demo_id": "demo-038",
+      "provider_name": "Meadowbrook Equine",
+      "category": "Horse Trailer Dealers",
+      "category_parent": "Retail and Businesses",
+      "services": [
+        "Payment Plans",
+        "Group Discounts",
+        "Online Booking",
+        "Insured & Licensed"
+      ],
+      "short_description": "Friendly, reliable horse trailer dealers for riders and horses in Los Angeles.",
+      "full_description": "At Meadowbrook Equine every horse is treated like our own. Our team offers horse trailer dealers services for pleasure riders, amateurs and professionals across the Los Angeles area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Digital records & photos",
+        "Travel within 50 miles",
+        "Written report after every visit"
+      ],
+      "location": {
+        "address": "4730 Meadow Ln, Los Angeles, CA 90090, USA",
+        "city": "Los Angeles, CA",
+        "lat": 34.102545,
+        "lng": -118.320888
+      },
+      "contact": {
+        "phone": "(213) 555-0134",
+        "email": "hello@meadowbrookequine.example.com"
+      },
+      "date": "2026-03-03 08:10:00"
+    },
+    {
+      "demo_id": "demo-039",
+      "provider_name": "Cedar Creek Partners",
+      "category": "Farm Maintenance",
+      "category_parent": "Barns, Breeding & Transport",
+      "services": [
+        "Bilingual (EN/ES)",
+        "Certified Professional",
+        "Emergency 24/7",
+        "Mobile Service"
+      ],
+      "short_description": "Chicago's go-to farm maintenance for show and pleasure horses.",
+      "full_description": "Founded in 2013, Cedar Creek Partners is a farm maintenance business built on experience and repeat clients. We travel to barns throughout Chicago and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Works with your vet and farrier",
+        "Follow-up call included",
+        "Emergency call-outs",
+        "Show-day support"
+      ],
+      "location": {
+        "address": "7205 Park Ave, Chicago, IL 60660, USA",
+        "city": "Chicago, IL",
+        "lat": 41.904515,
+        "lng": -87.593848
+      },
+      "contact": {
+        "phone": "(312) 555-0103",
+        "email": "hello@cedarcreekpartners.example.com"
+      },
+      "date": "2026-02-08 18:53:00"
+    },
+    {
+      "demo_id": "demo-040",
+      "provider_name": "Wildflower Horse Co.",
+      "category": "Equine Dentist",
+      "category_parent": "Horse Health & Care",
+      "services": [
+        "Insured & Licensed",
+        "Group Discounts",
+        "Bilingual (EN/ES)",
+        "Emergency 24/7"
+      ],
+      "short_description": "Chicago's go-to equine dentist for show and pleasure horses.",
+      "full_description": "Wildflower Horse Co. has worked with horses and riders around Chicago for more than 22 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Follow-up call included",
+        "Flexible scheduling",
+        "Works with your vet and farrier",
+        "Emergency call-outs"
+      ],
+      "location": {
+        "address": "669 Elm St, Chicago, IL 60661, USA",
+        "city": "Chicago, IL",
+        "lat": 41.880755,
+        "lng": -87.640199
+      },
+      "contact": {
+        "phone": "(312) 555-0185",
+        "email": "hello@wildflowerhorseco.example.com"
+      },
+      "date": "2026-02-28 10:21:00"
+    },
+    {
+      "demo_id": "demo-041",
+      "provider_name": "Highfield Services",
+      "category": "Horse Show / Event Management",
+      "category_parent": "Equine Services, Media & Events",
+      "services": [
+        "Weekend Availability",
+        "Mobile Service",
+        "Certified Professional"
+      ],
+      "short_description": "Chicago's go-to horse show / event management for show and pleasure horses.",
+      "full_description": "Highfield Services has worked with horses and riders around Chicago for more than 13 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Flexible scheduling",
+        "Free initial consultation",
+        "Travel within 50 miles",
+        "Digital records & photos"
+      ],
+      "location": {
+        "address": "6571 Forest Dr, Chicago, IL 60605, USA",
+        "city": "Chicago, IL",
+        "lat": 41.871776,
+        "lng": -87.663187
+      },
+      "contact": {
+        "phone": "(312) 555-0146",
+        "email": "hello@highfieldservices.example.com"
+      },
+      "date": "2026-08-21 15:48:00"
+    },
+    {
+      "demo_id": "demo-042",
+      "provider_name": "Fox Run Equestrian",
+      "category": "Rehabilitation & Therapy",
+      "category_parent": "Horse Health & Care",
+      "services": [
+        "Free Consultation",
+        "Weekend Availability"
+      ],
+      "short_description": "Friendly, reliable rehabilitation & therapy for riders and horses in Chicago.",
+      "full_description": "Founded in 2013, Fox Run Equestrian is a rehabilitation & therapy business built on experience and repeat clients. We travel to barns throughout Chicago and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Digital records & photos",
+        "Flexible scheduling",
+        "Same-week appointments"
+      ],
+      "location": {
+        "address": "7188 River Rd, Chicago, IL 60616, USA",
+        "city": "Chicago, IL",
+        "lat": 41.812142,
+        "lng": -87.606396
+      },
+      "contact": {
+        "phone": "(312) 555-0128",
+        "email": "hello@foxrunequestrian.example.com"
+      },
+      "date": "2026-02-15 09:41:00"
+    },
+    {
+      "demo_id": "demo-043",
+      "provider_name": "Liberty Horse Co.",
+      "category": "Groom",
+      "category_parent": "Training & Riding",
+      "services": [
+        "Online Booking",
+        "Payment Plans",
+        "Weekend Availability"
+      ],
+      "short_description": "Personal, horse-first groom in the Chicago area.",
+      "full_description": "Liberty Horse Co. has worked with horses and riders around Chicago for more than 20 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Written report after every visit",
+        "Same-week appointments",
+        "Show-day support",
+        "Flexible scheduling",
+        "Follow-up call included"
+      ],
+      "location": {
+        "address": "4489 Mill Rd, Chicago, IL 60662, USA",
+        "city": "Chicago, IL",
+        "lat": 41.945334,
+        "lng": -87.675928
+      },
+      "contact": {
+        "phone": "(312) 555-0164",
+        "email": "hello@libertyhorseco.example.com"
+      },
+      "date": "2026-05-27 08:18:00"
+    },
+    {
+      "demo_id": "demo-044",
+      "provider_name": "Bluegrass Partners",
+      "category": "Fencing & Pasture Management",
+      "category_parent": "Barns, Breeding & Transport",
+      "services": [
+        "Bilingual (EN/ES)",
+        "Show Season Support",
+        "Online Booking"
+      ],
+      "short_description": "Personal, horse-first fencing & pasture management in the Chicago area.",
+      "full_description": "Founded in 2001, Bluegrass Partners is a fencing & pasture management business built on experience and repeat clients. We travel to barns throughout Chicago and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Travel within 50 miles",
+        "Emergency call-outs",
+        "Flexible scheduling",
+        "Works with your vet and farrier",
+        "Experienced with young horses"
+      ],
+      "location": {
+        "address": "8032 Cedar Ln, Chicago, IL 60658, USA",
+        "city": "Chicago, IL",
+        "lat": 41.883501,
+        "lng": -87.657678
+      },
+      "contact": {
+        "phone": "(312) 555-0105",
+        "email": "hello@bluegrasspartners.example.com"
+      },
+      "date": "2026-06-24 15:45:00"
+    },
+    {
+      "demo_id": "demo-045",
+      "provider_name": "Whitehorse Equestrian",
+      "category": "Accounting & Bookkeeping",
+      "category_parent": "Equine Services, Media & Events",
+      "services": [
+        "Weekend Availability",
+        "Bilingual (EN/ES)"
+      ],
+      "short_description": "Trusted accounting & bookkeeping serving Houston and surrounding barns.",
+      "full_description": "At Whitehorse Equestrian every horse is treated like our own. Our team offers accounting & bookkeeping services for pleasure riders, amateurs and professionals across the Houston area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Works with your vet and farrier",
+        "Written report after every visit",
+        "Flexible scheduling"
+      ],
+      "location": {
+        "address": "616 Cedar Ln, Houston, TX 77065, USA",
+        "city": "Houston, TX",
+        "lat": 29.82555,
+        "lng": -95.400041
+      },
+      "contact": {
+        "phone": "(713) 555-0183",
+        "email": "hello@whitehorseequestrian.example.com"
+      },
+      "date": "2026-03-03 15:50:00"
+    },
+    {
+      "demo_id": "demo-046",
+      "provider_name": "Sunrise Partners",
+      "category": "Stallion / Foaling Services",
+      "category_parent": "Barns, Breeding & Transport",
+      "services": [
+        "Certified Professional",
+        "Bilingual (EN/ES)",
+        "Weekend Availability",
+        "Mobile Service"
+      ],
+      "short_description": "Professional stallion / foaling services with over 26 years of experience.",
+      "full_description": "At Sunrise Partners every horse is treated like our own. Our team offers stallion / foaling services services for pleasure riders, amateurs and professionals across the Houston area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Same-week appointments",
+        "Travel within 50 miles",
+        "Show-day support",
+        "Experienced with young horses",
+        "Works with your vet and farrier"
+      ],
+      "location": {
+        "address": "6522 Maple Dr, Houston, TX 77043, USA",
+        "city": "Houston, TX",
+        "lat": 29.809728,
+        "lng": -95.305118
+      },
+      "contact": {
+        "phone": "(713) 555-0155",
+        "email": "hello@sunrisepartners.example.com"
+      },
+      "date": "2026-02-25 18:45:00"
+    },
+    {
+      "demo_id": "demo-047",
+      "provider_name": "Harbor Equestrian",
+      "category": "Blanket Cleaning",
+      "category_parent": "Horse Health & Care",
+      "services": [
+        "Barn Calls",
+        "Online Booking",
+        "Weekend Availability"
+      ],
+      "short_description": "Houston's go-to blanket cleaning for show and pleasure horses.",
+      "full_description": "At Harbor Equestrian every horse is treated like our own. Our team offers blanket cleaning services for pleasure riders, amateurs and professionals across the Houston area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Emergency call-outs",
+        "Experienced with young horses",
+        "Written report after every visit",
+        "Works with your vet and farrier"
+      ],
+      "location": {
+        "address": "4916 Main St, Houston, TX 77006, USA",
+        "city": "Houston, TX",
+        "lat": 29.735812,
+        "lng": -95.449699
+      },
+      "contact": {
+        "phone": "(713) 555-0122",
+        "email": "hello@harborequestrian.example.com"
+      },
+      "date": "2026-02-20 14:39:00"
+    },
+    {
+      "demo_id": "demo-048",
+      "provider_name": "Liberty Partners",
+      "category": "Short-Term / Overnight Stabling",
+      "category_parent": "Barns, Breeding & Transport",
+      "services": [
+        "Group Discounts",
+        "Weekend Availability",
+        "Barn Calls"
+      ],
+      "short_description": "Trusted short-term / overnight stabling serving Houston and surrounding barns.",
+      "full_description": "At Liberty Partners every horse is treated like our own. Our team offers short-term / overnight stabling services for pleasure riders, amateurs and professionals across the Houston area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Package pricing available",
+        "Follow-up call included",
+        "Emergency call-outs"
+      ],
+      "location": {
+        "address": "3814 Church St, Houston, TX 77082, USA",
+        "city": "Houston, TX",
+        "lat": 29.725957,
+        "lng": -95.413841
+      },
+      "contact": {
+        "phone": "(713) 555-0138",
+        "email": "hello@libertypartners.example.com"
+      },
+      "date": "2026-07-23 12:29:00"
+    },
+    {
+      "demo_id": "demo-049",
+      "provider_name": "Liberty Stables",
+      "category": "Fencing & Pasture Management",
+      "category_parent": "Barns, Breeding & Transport",
+      "services": [
+        "Insured & Licensed",
+        "Free Consultation",
+        "Mobile Service",
+        "Payment Plans"
+      ],
+      "short_description": "Houston's go-to fencing & pasture management for show and pleasure horses.",
+      "full_description": "Liberty Stables has worked with horses and riders around Houston for more than 11 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Works with your vet and farrier",
+        "Package pricing available",
+        "Show-day support",
+        "Travel within 50 miles",
+        "Follow-up call included"
+      ],
+      "location": {
+        "address": "6258 Spring St, Houston, TX 77046, USA",
+        "city": "Houston, TX",
+        "lat": 29.770874,
+        "lng": -95.281115
+      },
+      "contact": {
+        "phone": "(713) 555-0128",
+        "email": "hello@libertystables.example.com"
+      },
+      "date": "2026-04-20 12:43:00"
+    },
+    {
+      "demo_id": "demo-050",
+      "provider_name": "Twin Oaks Stables",
+      "category": "Show coach",
+      "category_parent": "Training & Riding",
+      "services": [
+        "Show Season Support",
+        "Insured & Licensed",
+        "Barn Calls"
+      ],
+      "short_description": "Friendly, reliable show coach for riders and horses in Miami.",
+      "full_description": "Twin Oaks Stables has worked with horses and riders around Miami for more than 24 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Written report after every visit",
+        "Digital records & photos",
+        "Follow-up call included"
+      ],
+      "location": {
+        "address": "655 Meadow Ln, Miami, FL 33157, USA",
+        "city": "Miami, FL",
+        "lat": 25.696371,
+        "lng": -80.216125
+      },
+      "contact": {
+        "phone": "(305) 555-0167",
+        "email": "hello@twinoaksstables.example.com"
+      },
+      "date": "2026-09-09 10:16:00"
+    },
+    {
+      "demo_id": "demo-051",
+      "provider_name": "Meadowbrook & Co.",
+      "category": "Trailer Repair & Rental",
+      "category_parent": "Retail and Businesses",
+      "services": [
+        "Emergency 24/7",
+        "Insured & Licensed",
+        "Mobile Service"
+      ],
+      "short_description": "Professional trailer repair & rental with over 29 years of experience.",
+      "full_description": "Founded in 1997, Meadowbrook & Co. is a trailer repair & rental business built on experience and repeat clients. We travel to barns throughout Miami and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Digital records & photos",
+        "Same-week appointments",
+        "Package pricing available",
+        "Follow-up call included"
+      ],
+      "location": {
+        "address": "1896 Church St, Miami, FL 33110, USA",
+        "city": "Miami, FL",
+        "lat": 25.711406,
+        "lng": -80.10783
+      },
+      "contact": {
+        "phone": "(305) 555-0186",
+        "email": "hello@meadowbrookandco.example.com"
+      },
+      "date": "2026-05-19 14:52:00"
+    },
+    {
+      "demo_id": "demo-052",
+      "provider_name": "Liberty Equine",
+      "category": "Lawyers and Counsels",
+      "category_parent": "Equine Services, Media & Events",
+      "services": [
+        "Group Discounts",
+        "Insured & Licensed",
+        "Emergency 24/7"
+      ],
+      "short_description": "Professional lawyers and counsels with over 23 years of experience.",
+      "full_description": "Founded in 2003, Liberty Equine is a lawyers and counsels business built on experience and repeat clients. We travel to barns throughout Miami and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Free initial consultation",
+        "Works with your vet and farrier",
+        "Show-day support"
+      ],
+      "location": {
+        "address": "9208 Ridge Rd, Miami, FL 33179, USA",
+        "city": "Miami, FL",
+        "lat": 25.722691,
+        "lng": -80.270421
+      },
+      "contact": {
+        "phone": "(305) 555-0163",
+        "email": "hello@libertyequine.example.com"
+      },
+      "date": "2026-02-04 11:56:00"
+    },
+    {
+      "demo_id": "demo-053",
+      "provider_name": "Pine Valley Studio",
+      "category": "Show coach",
+      "category_parent": "Training & Riding",
+      "services": [
+        "Mobile Service",
+        "Show Season Support",
+        "Online Booking"
+      ],
+      "short_description": "Personal, horse-first show coach in the Miami area.",
+      "full_description": "At Pine Valley Studio every horse is treated like our own. Our team offers show coach services for pleasure riders, amateurs and professionals across the Miami area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Package pricing available",
+        "Travel within 50 miles",
+        "Follow-up call included",
+        "Same-week appointments"
+      ],
+      "location": {
+        "address": "9632 Cedar Ln, Miami, FL 33154, USA",
+        "city": "Miami, FL",
+        "lat": 25.783389,
+        "lng": -80.131735
+      },
+      "contact": {
+        "phone": "(305) 555-0187",
+        "email": "hello@pinevalleystudio.example.com"
+      },
+      "date": "2026-06-18 18:22:00"
+    },
+    {
+      "demo_id": "demo-054",
+      "provider_name": "Whitehorse Horse Co.",
+      "category": "Nutrition & Feed Consulting",
+      "category_parent": "Horse Health & Care",
+      "services": [
+        "Show Season Support",
+        "Online Booking"
+      ],
+      "short_description": "Personal, horse-first nutrition & feed consulting in the Miami area.",
+      "full_description": "Whitehorse Horse Co. has worked with horses and riders around Miami for more than 10 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Emergency call-outs",
+        "Travel within 50 miles",
+        "Same-week appointments"
+      ],
+      "location": {
+        "address": "2011 Church St, Miami, FL 33112, USA",
+        "city": "Miami, FL",
+        "lat": 25.784488,
+        "lng": -80.166293
+      },
+      "contact": {
+        "phone": "(305) 555-0197",
+        "email": "hello@whitehorsehorseco.example.com"
+      },
+      "date": "2026-09-07 17:13:00"
+    },
+    {
+      "demo_id": "demo-055",
+      "provider_name": "Sunrise Equestrian",
+      "category": "Retirement & rescue Facilities",
+      "category_parent": "Barns, Breeding & Transport",
+      "services": [
+        "Barn Calls",
+        "Emergency 24/7",
+        "Mobile Service"
+      ],
+      "short_description": "Friendly, reliable retirement & rescue facilities for riders and horses in Wellington.",
+      "full_description": "Founded in 1997, Sunrise Equestrian is a retirement & rescue facilities business built on experience and repeat clients. We travel to barns throughout Wellington and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Free initial consultation",
+        "Follow-up call included",
+        "Travel within 50 miles"
+      ],
+      "location": {
+        "address": "9774 Main St, Wellington, FL 33436, USA",
+        "city": "Wellington, FL",
+        "lat": 26.708877,
+        "lng": -80.305356
+      },
+      "contact": {
+        "phone": "(561) 555-0175",
+        "email": "hello@sunriseequestrian.example.com"
+      },
+      "date": "2026-06-01 10:16:00"
+    },
+    {
+      "demo_id": "demo-056",
+      "provider_name": "Oak Hill Group",
+      "category": "Rehabilitation & Therapy",
+      "category_parent": "Horse Health & Care",
+      "services": [
+        "Weekend Availability",
+        "Online Booking",
+        "Payment Plans"
+      ],
+      "short_description": "Personal, horse-first rehabilitation & therapy in the Wellington area.",
+      "full_description": "Oak Hill Group has worked with horses and riders around Wellington for more than 20 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Works with your vet and farrier",
+        "Experienced with young horses",
+        "Digital records & photos"
+      ],
+      "location": {
+        "address": "1872 Maple Dr, Wellington, FL 33461, USA",
+        "city": "Wellington, FL",
+        "lat": 26.651459,
+        "lng": -80.266233
+      },
+      "contact": {
+        "phone": "(561) 555-0138",
+        "email": "hello@oakhillgroup.example.com"
+      },
+      "date": "2026-08-21 08:03:00"
+    },
+    {
+      "demo_id": "demo-057",
+      "provider_name": "Whitehorse Group",
+      "category": "Trailer Repair & Rental",
+      "category_parent": "Retail and Businesses",
+      "services": [
+        "Barn Calls",
+        "Emergency 24/7",
+        "Certified Professional",
+        "Free Consultation"
+      ],
+      "short_description": "Trusted trailer repair & rental serving Wellington and surrounding barns.",
+      "full_description": "At Whitehorse Group every horse is treated like our own. Our team offers trailer repair & rental services for pleasure riders, amateurs and professionals across the Wellington area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Experienced with young horses",
+        "Emergency call-outs",
+        "Digital records & photos",
+        "Follow-up call included",
+        "Flexible scheduling"
+      ],
+      "location": {
+        "address": "1778 River Rd, Wellington, FL 33492, USA",
+        "city": "Wellington, FL",
+        "lat": 26.716058,
+        "lng": -80.318172
+      },
+      "contact": {
+        "phone": "(561) 555-0176",
+        "email": "hello@whitehorsegroup.example.com"
+      },
+      "date": "2026-09-10 15:32:00"
+    },
+    {
+      "demo_id": "demo-058",
+      "provider_name": "Willow Stables",
+      "category": "Tack Shops / Saddlery",
+      "category_parent": "Retail and Businesses",
+      "services": [
+        "Insured & Licensed",
+        "Emergency 24/7",
+        "Show Season Support"
+      ],
+      "short_description": "Wellington's go-to tack shops / saddlery for show and pleasure horses.",
+      "full_description": "At Willow Stables every horse is treated like our own. Our team offers tack shops / saddlery services for pleasure riders, amateurs and professionals across the Wellington area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Follow-up call included",
+        "Experienced with young horses",
+        "Show-day support",
+        "Works with your vet and farrier"
+      ],
+      "location": {
+        "address": "9043 Washington Blvd, Wellington, FL 33456, USA",
+        "city": "Wellington, FL",
+        "lat": 26.651918,
+        "lng": -80.290271
+      },
+      "contact": {
+        "phone": "(561) 555-0119",
+        "email": "hello@willowstables.example.com"
+      },
+      "date": "2026-08-03 09:53:00"
+    },
+    {
+      "demo_id": "demo-059",
+      "provider_name": "Blue Ridge Group",
+      "category": "Braiding",
+      "category_parent": "Horse Health & Care",
+      "services": [
+        "Emergency 24/7",
+        "Insured & Licensed",
+        "Show Season Support",
+        "Group Discounts"
+      ],
+      "short_description": "Personal, horse-first braiding in the Wellington area.",
+      "full_description": "At Blue Ridge Group every horse is treated like our own. Our team offers braiding services for pleasure riders, amateurs and professionals across the Wellington area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Free initial consultation",
+        "Show-day support",
+        "Emergency call-outs",
+        "Experienced with young horses",
+        "Follow-up call included"
+      ],
+      "location": {
+        "address": "6115 Cedar Ln, Wellington, FL 33472, USA",
+        "city": "Wellington, FL",
+        "lat": 26.597097,
+        "lng": -80.159208
+      },
+      "contact": {
+        "phone": "(561) 555-0113",
+        "email": "hello@blueridgegroup.example.com"
+      },
+      "date": "2026-09-07 10:42:00"
+    },
+    {
+      "demo_id": "demo-060",
+      "provider_name": "Stone Bridge Stables",
+      "category": "Trailer Repair & Rental",
+      "category_parent": "Retail and Businesses",
+      "services": [
+        "Payment Plans",
+        "Group Discounts",
+        "Weekend Availability",
+        "Mobile Service"
+      ],
+      "short_description": "Professional trailer repair & rental with over 15 years of experience.",
+      "full_description": "Founded in 2011, Stone Bridge Stables is a trailer repair & rental business built on experience and repeat clients. We travel to barns throughout Wellington and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Experienced with young horses",
+        "Show-day support",
+        "Free initial consultation",
+        "Written report after every visit",
+        "Works with your vet and farrier"
+      ],
+      "location": {
+        "address": "9123 Sunset Blvd, Wellington, FL 33415, USA",
+        "city": "Wellington, FL",
+        "lat": 26.695465,
+        "lng": -80.228062
+      },
+      "contact": {
+        "phone": "(561) 555-0189",
+        "email": "hello@stonebridgestables.example.com"
+      },
+      "date": "2026-05-11 13:00:00"
+    },
+    {
+      "demo_id": "demo-061",
+      "provider_name": "Oak Hill Partners",
+      "category": "Horsemanship & Behavior",
+      "category_parent": "Training & Riding",
+      "services": [
+        "Online Booking",
+        "Insured & Licensed",
+        "Group Discounts",
+        "Bilingual (EN/ES)"
+      ],
+      "short_description": "Trusted horsemanship & behavior serving Wellington and surrounding barns.",
+      "full_description": "Founded in 2001, Oak Hill Partners is a horsemanship & behavior business built on experience and repeat clients. We travel to barns throughout Wellington and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Written report after every visit",
+        "Follow-up call included",
+        "Show-day support",
+        "Experienced with young horses"
+      ],
+      "location": {
+        "address": "6576 Maple Dr, Wellington, FL 33419, USA",
+        "city": "Wellington, FL",
+        "lat": 26.692436,
+        "lng": -80.156474
+      },
+      "contact": {
+        "phone": "(561) 555-0199",
+        "email": "hello@oakhillpartners.example.com"
+      },
+      "date": "2026-02-02 10:10:00"
+    },
+    {
+      "demo_id": "demo-062",
+      "provider_name": "Wildflower Stables",
+      "category": "Rehabilitation & Therapy",
+      "category_parent": "Horse Health & Care",
+      "services": [
+        "Show Season Support",
+        "Insured & Licensed"
+      ],
+      "short_description": "Friendly, reliable rehabilitation & therapy for riders and horses in Wellington.",
+      "full_description": "Founded in 2014, Wildflower Stables is a rehabilitation & therapy business built on experience and repeat clients. We travel to barns throughout Wellington and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Show-day support",
+        "Experienced with young horses",
+        "Emergency call-outs"
+      ],
+      "location": {
+        "address": "7269 Mill Rd, Wellington, FL 33463, USA",
+        "city": "Wellington, FL",
+        "lat": 26.673691,
+        "lng": -80.256847
+      },
+      "contact": {
+        "phone": "(561) 555-0162",
+        "email": "hello@wildflowerstables.example.com"
+      },
+      "date": "2026-09-22 12:02:00"
+    },
+    {
+      "demo_id": "demo-063",
+      "provider_name": "Whitehorse Partners",
+      "category": "Horse Boarding",
+      "category_parent": "Barns, Breeding & Transport",
+      "services": [
+        "Emergency 24/7",
+        "Mobile Service",
+        "Bilingual (EN/ES)"
+      ],
+      "short_description": "Ocala's go-to horse boarding for show and pleasure horses.",
+      "full_description": "At Whitehorse Partners every horse is treated like our own. Our team offers horse boarding services for pleasure riders, amateurs and professionals across the Ocala area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Flexible scheduling",
+        "Written report after every visit",
+        "Experienced with young horses",
+        "Works with your vet and farrier",
+        "Travel within 50 miles"
+      ],
+      "location": {
+        "address": "135 Washington Blvd, Ocala, FL 34439, USA",
+        "city": "Ocala, FL",
+        "lat": 29.249545,
+        "lng": -82.091977
+      },
+      "contact": {
+        "phone": "(352) 555-0164",
+        "email": "hello@whitehorsepartners.example.com"
+      },
+      "date": "2026-09-27 18:51:00"
+    },
+    {
+      "demo_id": "demo-064",
+      "provider_name": "Riverbend Equine",
+      "category": "PR & Communications",
+      "category_parent": "Equine Services, Media & Events",
+      "services": [
+        "Group Discounts",
+        "Insured & Licensed",
+        "Free Consultation",
+        "Emergency 24/7"
+      ],
+      "short_description": "Personal, horse-first pr & communications in the Ocala area.",
+      "full_description": "At Riverbend Equine every horse is treated like our own. Our team offers pr & communications services for pleasure riders, amateurs and professionals across the Ocala area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Free initial consultation",
+        "Follow-up call included",
+        "Written report after every visit",
+        "Package pricing available"
+      ],
+      "location": {
+        "address": "317 Church St, Ocala, FL 34410, USA",
+        "city": "Ocala, FL",
+        "lat": 29.237895,
+        "lng": -82.126463
+      },
+      "contact": {
+        "phone": "(352) 555-0188",
+        "email": "hello@riverbendequine.example.com"
+      },
+      "date": "2026-06-03 14:54:00"
+    },
+    {
+      "demo_id": "demo-065",
+      "provider_name": "Stone Bridge Group",
+      "category": "Stall Cleaning services",
+      "category_parent": "Horse Health & Care",
+      "services": [
+        "Barn Calls",
+        "Emergency 24/7",
+        "Weekend Availability"
+      ],
+      "short_description": "Ocala's go-to stall cleaning services for show and pleasure horses.",
+      "full_description": "Stone Bridge Group has worked with horses and riders around Ocala for more than 22 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Same-week appointments",
+        "Digital records & photos",
+        "Experienced with young horses",
+        "Travel within 50 miles",
+        "Follow-up call included"
+      ],
+      "location": {
+        "address": "6570 Highland Ave, Ocala, FL 34411, USA",
+        "city": "Ocala, FL",
+        "lat": 29.172607,
+        "lng": -82.174251
+      },
+      "contact": {
+        "phone": "(352) 555-0144",
+        "email": "hello@stonebridgegroup.example.com"
+      },
+      "date": "2026-03-08 09:09:00"
+    },
+    {
+      "demo_id": "demo-066",
+      "provider_name": "Red Barn Equestrian",
+      "category": "Reproduction Services",
+      "category_parent": "Barns, Breeding & Transport",
+      "services": [
+        "Bilingual (EN/ES)",
+        "Group Discounts",
+        "Payment Plans",
+        "Show Season Support"
+      ],
+      "short_description": "Professional reproduction services with over 23 years of experience.",
+      "full_description": "Founded in 2003, Red Barn Equestrian is a reproduction services business built on experience and repeat clients. We travel to barns throughout Ocala and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Follow-up call included",
+        "Written report after every visit",
+        "Package pricing available",
+        "Same-week appointments",
+        "Emergency call-outs"
+      ],
+      "location": {
+        "address": "2514 Maple Dr, Ocala, FL 34423, USA",
+        "city": "Ocala, FL",
+        "lat": 29.250381,
+        "lng": -82.117069
+      },
+      "contact": {
+        "phone": "(352) 555-0156",
+        "email": "hello@redbarnequestrian.example.com"
+      },
+      "date": "2026-05-26 12:37:00"
+    },
+    {
+      "demo_id": "demo-067",
+      "provider_name": "Blue Ridge Horse Co.",
+      "category": "Nutrition & Feed Consulting",
+      "category_parent": "Horse Health & Care",
+      "services": [
+        "Weekend Availability",
+        "Insured & Licensed",
+        "Bilingual (EN/ES)",
+        "Certified Professional"
+      ],
+      "short_description": "Trusted nutrition & feed consulting serving Ocala and surrounding barns.",
+      "full_description": "Founded in 2008, Blue Ridge Horse Co. is a nutrition & feed consulting business built on experience and repeat clients. We travel to barns throughout Ocala and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Free initial consultation",
+        "Package pricing available",
+        "Emergency call-outs",
+        "Travel within 50 miles",
+        "Follow-up call included"
+      ],
+      "location": {
+        "address": "7414 Oak Ave, Ocala, FL 34408, USA",
+        "city": "Ocala, FL",
+        "lat": 29.168823,
+        "lng": -82.178426
+      },
+      "contact": {
+        "phone": "(352) 555-0177",
+        "email": "hello@blueridgehorseco.example.com"
+      },
+      "date": "2026-08-17 10:03:00"
+    },
+    {
+      "demo_id": "demo-068",
+      "provider_name": "Willow & Co.",
+      "category": "Saddle & Tack Repair / Leatherwork",
+      "category_parent": "Retail and Businesses",
+      "services": [
+        "Weekend Availability",
+        "Payment Plans",
+        "Barn Calls",
+        "Show Season Support"
+      ],
+      "short_description": "Professional saddle & tack repair / leatherwork with over 26 years of experience.",
+      "full_description": "At Willow & Co. every horse is treated like our own. Our team offers saddle & tack repair / leatherwork services for pleasure riders, amateurs and professionals across the Ocala area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Show-day support",
+        "Flexible scheduling",
+        "Experienced with young horses",
+        "Follow-up call included"
+      ],
+      "location": {
+        "address": "1391 Highland Ave, Ocala, FL 34483, USA",
+        "city": "Ocala, FL",
+        "lat": 29.141358,
+        "lng": -82.185506
+      },
+      "contact": {
+        "phone": "(352) 555-0186",
+        "email": "hello@willowandco.example.com"
+      },
+      "date": "2026-01-26 18:41:00"
+    },
+    {
+      "demo_id": "demo-069",
+      "provider_name": "Blue Ridge & Co.",
+      "category": "Marketing & Social Media",
+      "category_parent": "Equine Services, Media & Events",
+      "services": [
+        "Emergency 24/7",
+        "Payment Plans",
+        "Barn Calls"
+      ],
+      "short_description": "Personal, horse-first marketing & social media in the Lexington area.",
+      "full_description": "Blue Ridge & Co. has worked with horses and riders around Lexington for more than 7 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Show-day support",
+        "Experienced with young horses",
+        "Flexible scheduling",
+        "Written report after every visit"
+      ],
+      "location": {
+        "address": "9151 Broadway, Lexington, KY 40537, USA",
+        "city": "Lexington, KY",
+        "lat": 38.005879,
+        "lng": -84.440418
+      },
+      "contact": {
+        "phone": "(859) 555-0176",
+        "email": "hello@blueridgeandco.example.com"
+      },
+      "date": "2026-02-10 16:24:00"
+    },
+    {
+      "demo_id": "demo-070",
+      "provider_name": "Oak Hill Studio",
+      "category": "Marketing & Social Media",
+      "category_parent": "Equine Services, Media & Events",
+      "services": [
+        "Online Booking",
+        "Certified Professional",
+        "Barn Calls"
+      ],
+      "short_description": "Friendly, reliable marketing & social media for riders and horses in Lexington.",
+      "full_description": "At Oak Hill Studio every horse is treated like our own. Our team offers marketing & social media services for pleasure riders, amateurs and professionals across the Lexington area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Same-week appointments",
+        "Show-day support",
+        "Works with your vet and farrier"
+      ],
+      "location": {
+        "address": "6947 Highland Ave, Lexington, KY 40547, USA",
+        "city": "Lexington, KY",
+        "lat": 37.973152,
+        "lng": -84.538104
+      },
+      "contact": {
+        "phone": "(859) 555-0164",
+        "email": "hello@oakhillstudio.example.com"
+      },
+      "date": "2026-09-27 16:02:00"
+    },
+    {
+      "demo_id": "demo-071",
+      "provider_name": "Cedar Creek Equestrian",
+      "category": "Website Design & Technology",
+      "category_parent": "Equine Services, Media & Events",
+      "services": [
+        "Bilingual (EN/ES)",
+        "Mobile Service",
+        "Insured & Licensed",
+        "Show Season Support"
+      ],
+      "short_description": "Personal, horse-first website design & technology in the Lexington area.",
+      "full_description": "Cedar Creek Equestrian has worked with horses and riders around Lexington for more than 23 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Works with your vet and farrier",
+        "Travel within 50 miles",
+        "Package pricing available",
+        "Show-day support",
+        "Emergency call-outs"
+      ],
+      "location": {
+        "address": "6182 Cedar Ln, Lexington, KY 40521, USA",
+        "city": "Lexington, KY",
+        "lat": 37.995918,
+        "lng": -84.468988
+      },
+      "contact": {
+        "phone": "(859) 555-0129",
+        "email": "hello@cedarcreekequestrian.example.com"
+      },
+      "date": "2026-09-08 12:51:00"
+    },
+    {
+      "demo_id": "demo-072",
+      "provider_name": "Wildflower Partners",
+      "category": "Horse Trailer Dealers",
+      "category_parent": "Retail and Businesses",
+      "services": [
+        "Barn Calls",
+        "Free Consultation",
+        "Mobile Service",
+        "Bilingual (EN/ES)"
+      ],
+      "short_description": "Friendly, reliable horse trailer dealers for riders and horses in Lexington.",
+      "full_description": "Wildflower Partners has worked with horses and riders around Lexington for more than 18 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Digital records & photos",
+        "Same-week appointments",
+        "Works with your vet and farrier",
+        "Experienced with young horses"
+      ],
+      "location": {
+        "address": "7574 Meadow Ln, Lexington, KY 40549, USA",
+        "city": "Lexington, KY",
+        "lat": 38.041007,
+        "lng": -84.518341
+      },
+      "contact": {
+        "phone": "(859) 555-0136",
+        "email": "hello@wildflowerpartners.example.com"
+      },
+      "date": "2026-02-25 10:17:00"
+    },
+    {
+      "demo_id": "demo-073",
+      "provider_name": "Iron Gate Stables",
+      "category": "Saddle & Tack Repair / Leatherwork",
+      "category_parent": "Retail and Businesses",
+      "services": [
+        "Emergency 24/7",
+        "Show Season Support",
+        "Online Booking"
+      ],
+      "short_description": "Lexington's go-to saddle & tack repair / leatherwork for show and pleasure horses.",
+      "full_description": "Iron Gate Stables has worked with horses and riders around Lexington for more than 11 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Follow-up call included",
+        "Same-week appointments",
+        "Works with your vet and farrier"
+      ],
+      "location": {
+        "address": "7401 Sunset Blvd, Lexington, KY 40504, USA",
+        "city": "Lexington, KY",
+        "lat": 38.028686,
+        "lng": -84.522338
+      },
+      "contact": {
+        "phone": "(859) 555-0118",
+        "email": "hello@irongatestables.example.com"
+      },
+      "date": "2026-03-02 12:58:00"
+    },
+    {
+      "demo_id": "demo-074",
+      "provider_name": "Highfield Equestrian",
+      "category": "Horse Trailer Dealers",
+      "category_parent": "Retail and Businesses",
+      "services": [
+        "Weekend Availability",
+        "Payment Plans"
+      ],
+      "short_description": "Lexington's go-to horse trailer dealers for show and pleasure horses.",
+      "full_description": "Highfield Equestrian has worked with horses and riders around Lexington for more than 28 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Flexible scheduling",
+        "Same-week appointments",
+        "Show-day support",
+        "Travel within 50 miles",
+        "Emergency call-outs"
+      ],
+      "location": {
+        "address": "7695 Church St, Lexington, KY 40579, USA",
+        "city": "Lexington, KY",
+        "lat": 37.971335,
+        "lng": -84.579439
+      },
+      "contact": {
+        "phone": "(859) 555-0115",
+        "email": "hello@highfieldequestrian.example.com"
+      },
+      "date": "2026-01-08 14:40:00"
+    },
+    {
+      "demo_id": "demo-075",
+      "provider_name": "Blue Ridge Stables",
+      "category": "Feed & Hay Suppliers",
+      "category_parent": "Retail and Businesses",
+      "services": [
+        "Free Consultation",
+        "Insured & Licensed"
+      ],
+      "short_description": "Friendly, reliable feed & hay suppliers for riders and horses in Lexington.",
+      "full_description": "Founded in 1996, Blue Ridge Stables is a feed & hay suppliers business built on experience and repeat clients. We travel to barns throughout Lexington and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Emergency call-outs",
+        "Follow-up call included",
+        "Travel within 50 miles"
+      ],
+      "location": {
+        "address": "8199 Stable Way, Lexington, KY 40569, USA",
+        "city": "Lexington, KY",
+        "lat": 37.972901,
+        "lng": -84.500932
+      },
+      "contact": {
+        "phone": "(859) 555-0173",
+        "email": "hello@blueridgestables.example.com"
+      },
+      "date": "2026-07-06 18:42:00"
+    },
+    {
+      "demo_id": "demo-076",
+      "provider_name": "Northstar & Co.",
+      "category": "Braiding",
+      "category_parent": "Horse Health & Care",
+      "services": [
+        "Mobile Service",
+        "Group Discounts",
+        "Insured & Licensed"
+      ],
+      "short_description": "Trusted braiding serving Dallas and surrounding barns.",
+      "full_description": "At Northstar & Co. every horse is treated like our own. Our team offers braiding services for pleasure riders, amateurs and professionals across the Dallas area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Show-day support",
+        "Free initial consultation",
+        "Follow-up call included",
+        "Same-week appointments"
+      ],
+      "location": {
+        "address": "8628 Forest Dr, Dallas, TX 75265, USA",
+        "city": "Dallas, TX",
+        "lat": 32.816798,
+        "lng": -96.795628
+      },
+      "contact": {
+        "phone": "(214) 555-0144",
+        "email": "hello@northstarandco.example.com"
+      },
+      "date": "2026-04-24 18:40:00"
+    },
+    {
+      "demo_id": "demo-077",
+      "provider_name": "Bluegrass & Co.",
+      "category": "Stall Cleaning services",
+      "category_parent": "Horse Health & Care",
+      "services": [
+        "Group Discounts",
+        "Barn Calls",
+        "Certified Professional"
+      ],
+      "short_description": "Professional stall cleaning services with over 8 years of experience.",
+      "full_description": "Founded in 2018, Bluegrass & Co. is a stall cleaning services business built on experience and repeat clients. We travel to barns throughout Dallas and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Works with your vet and farrier",
+        "Package pricing available",
+        "Free initial consultation"
+      ],
+      "location": {
+        "address": "736 Sunset Blvd, Dallas, TX 75270, USA",
+        "city": "Dallas, TX",
+        "lat": 32.754097,
+        "lng": -96.771297
+      },
+      "contact": {
+        "phone": "(214) 555-0137",
+        "email": "hello@bluegrassandco.example.com"
+      },
+      "date": "2026-04-02 11:56:00"
+    },
+    {
+      "demo_id": "demo-078",
+      "provider_name": "Sunrise Horse Co.",
+      "category": "Acupuncture & Alternative Therapies",
+      "category_parent": "Horse Health & Care",
+      "services": [
+        "Mobile Service",
+        "Group Discounts",
+        "Show Season Support"
+      ],
+      "short_description": "Friendly, reliable acupuncture & alternative therapies for riders and horses in Dallas.",
+      "full_description": "At Sunrise Horse Co. every horse is treated like our own. Our team offers acupuncture & alternative therapies services for pleasure riders, amateurs and professionals across the Dallas area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Same-week appointments",
+        "Follow-up call included",
+        "Flexible scheduling",
+        "Emergency call-outs"
+      ],
+      "location": {
+        "address": "6534 Forest Dr, Dallas, TX 75261, USA",
+        "city": "Dallas, TX",
+        "lat": 32.742164,
+        "lng": -96.751408
+      },
+      "contact": {
+        "phone": "(214) 555-0195",
+        "email": "hello@sunrisehorseco.example.com"
+      },
+      "date": "2026-08-13 13:11:00"
+    },
+    {
+      "demo_id": "demo-079",
+      "provider_name": "Clover Stables",
+      "category": "Barn & Farm Suppliers",
+      "category_parent": "Retail and Businesses",
+      "services": [
+        "Emergency 24/7",
+        "Certified Professional",
+        "Show Season Support"
+      ],
+      "short_description": "Personal, horse-first barn & farm suppliers in the Dallas area.",
+      "full_description": "At Clover Stables every horse is treated like our own. Our team offers barn & farm suppliers services for pleasure riders, amateurs and professionals across the Dallas area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Show-day support",
+        "Works with your vet and farrier",
+        "Package pricing available",
+        "Flexible scheduling",
+        "Written report after every visit"
+      ],
+      "location": {
+        "address": "6965 Maple Dr, Dallas, TX 75256, USA",
+        "city": "Dallas, TX",
+        "lat": 32.791043,
+        "lng": -96.738979
+      },
+      "contact": {
+        "phone": "(214) 555-0188",
+        "email": "hello@cloverstables.example.com"
+      },
+      "date": "2026-08-12 15:02:00"
+    },
+    {
+      "demo_id": "demo-080",
+      "provider_name": "Cedar Creek Group",
+      "category": "PR & Communications",
+      "category_parent": "Equine Services, Media & Events",
+      "services": [
+        "Payment Plans",
+        "Group Discounts"
+      ],
+      "short_description": "Friendly, reliable pr & communications for riders and horses in Atlanta.",
+      "full_description": "Cedar Creek Group has worked with horses and riders around Atlanta for more than 12 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Free initial consultation",
+        "Written report after every visit",
+        "Same-week appointments",
+        "Travel within 50 miles"
+      ],
+      "location": {
+        "address": "949 Maple Dr, Atlanta, GA 30386, USA",
+        "city": "Atlanta, GA",
+        "lat": 33.768252,
+        "lng": -84.412604
+      },
+      "contact": {
+        "phone": "(404) 555-0199",
+        "email": "hello@cedarcreekgroup.example.com"
+      },
+      "date": "2026-06-12 14:36:00"
+    },
+    {
+      "demo_id": "demo-081",
+      "provider_name": "Wildflower Services",
+      "category": "Chiropractic & Osteopathy",
+      "category_parent": "Horse Health & Care",
+      "services": [
+        "Group Discounts",
+        "Free Consultation",
+        "Online Booking"
+      ],
+      "short_description": "Atlanta's go-to chiropractic & osteopathy for show and pleasure horses.",
+      "full_description": "At Wildflower Services every horse is treated like our own. Our team offers chiropractic & osteopathy services for pleasure riders, amateurs and professionals across the Atlanta area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Free initial consultation",
+        "Written report after every visit",
+        "Package pricing available"
+      ],
+      "location": {
+        "address": "6105 Church St, Atlanta, GA 30398, USA",
+        "city": "Atlanta, GA",
+        "lat": 33.689764,
+        "lng": -84.453215
+      },
+      "contact": {
+        "phone": "(404) 555-0166",
+        "email": "hello@wildflowerservices.example.com"
+      },
+      "date": "2026-07-18 09:16:00"
+    },
+    {
+      "demo_id": "demo-082",
+      "provider_name": "Red Barn Partners",
+      "category": "Stallion / Foaling Services",
+      "category_parent": "Barns, Breeding & Transport",
+      "services": [
+        "Emergency 24/7",
+        "Group Discounts",
+        "Show Season Support"
+      ],
+      "short_description": "Friendly, reliable stallion / foaling services for riders and horses in Atlanta.",
+      "full_description": "Founded in 2013, Red Barn Partners is a stallion / foaling services business built on experience and repeat clients. We travel to barns throughout Atlanta and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Follow-up call included",
+        "Same-week appointments",
+        "Digital records & photos",
+        "Emergency call-outs",
+        "Show-day support"
+      ],
+      "location": {
+        "address": "8057 Washington Blvd, Atlanta, GA 30316, USA",
+        "city": "Atlanta, GA",
+        "lat": 33.698002,
+        "lng": -84.464671
+      },
+      "contact": {
+        "phone": "(404) 555-0138",
+        "email": "hello@redbarnpartners.example.com"
+      },
+      "date": "2026-03-23 18:11:00"
+    },
+    {
+      "demo_id": "demo-083",
+      "provider_name": "Northstar Farm",
+      "category": "Insurance",
+      "category_parent": "Equine Services, Media & Events",
+      "services": [
+        "Bilingual (EN/ES)",
+        "Weekend Availability",
+        "Barn Calls"
+      ],
+      "short_description": "Personal, horse-first insurance in the Atlanta area.",
+      "full_description": "Founded in 2019, Northstar Farm is a insurance business built on experience and repeat clients. We travel to barns throughout Atlanta and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Same-week appointments",
+        "Works with your vet and farrier",
+        "Show-day support",
+        "Flexible scheduling",
+        "Package pricing available"
+      ],
+      "location": {
+        "address": "3302 Cedar Ln, Atlanta, GA 30331, USA",
+        "city": "Atlanta, GA",
+        "lat": 33.789652,
+        "lng": -84.473269
+      },
+      "contact": {
+        "phone": "(404) 555-0167",
+        "email": "hello@northstarfarm.example.com"
+      },
+      "date": "2026-07-25 14:52:00"
+    },
+    {
+      "demo_id": "demo-084",
+      "provider_name": "Oak Hill & Co.",
+      "category": "Clipping",
+      "category_parent": "Horse Health & Care",
+      "services": [
+        "Barn Calls",
+        "Certified Professional",
+        "Insured & Licensed",
+        "Weekend Availability"
+      ],
+      "short_description": "Personal, horse-first clipping in the Denver area.",
+      "full_description": "Founded in 2002, Oak Hill & Co. is a clipping business built on experience and repeat clients. We travel to barns throughout Denver and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Same-week appointments",
+        "Digital records & photos",
+        "Written report after every visit"
+      ],
+      "location": {
+        "address": "1225 Church St, Denver, CO 80260, USA",
+        "city": "Denver, CO",
+        "lat": 39.764415,
+        "lng": -105.018287
+      },
+      "contact": {
+        "phone": "(303) 555-0138",
+        "email": "hello@oakhillandco.example.com"
+      },
+      "date": "2026-03-06 13:59:00"
+    },
+    {
+      "demo_id": "demo-085",
+      "provider_name": "Meadowbrook Stables",
+      "category": "Horse Boarding",
+      "category_parent": "Barns, Breeding & Transport",
+      "services": [
+        "Group Discounts",
+        "Barn Calls",
+        "Payment Plans",
+        "Certified Professional"
+      ],
+      "short_description": "Personal, horse-first horse boarding in the Denver area.",
+      "full_description": "Meadowbrook Stables has worked with horses and riders around Denver for more than 12 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Experienced with young horses",
+        "Emergency call-outs",
+        "Works with your vet and farrier"
+      ],
+      "location": {
+        "address": "3226 Forest Dr, Denver, CO 80236, USA",
+        "city": "Denver, CO",
+        "lat": 39.686724,
+        "lng": -105.025792
+      },
+      "contact": {
+        "phone": "(303) 555-0143",
+        "email": "hello@meadowbrookstables.example.com"
+      },
+      "date": "2026-01-27 08:05:00"
+    },
+    {
+      "demo_id": "demo-086",
+      "provider_name": "Twin Oaks Partners",
+      "category": "Acupuncture & Alternative Therapies",
+      "category_parent": "Horse Health & Care",
+      "services": [
+        "Free Consultation",
+        "Bilingual (EN/ES)",
+        "Online Booking",
+        "Insured & Licensed"
+      ],
+      "short_description": "Personal, horse-first acupuncture & alternative therapies in the Denver area.",
+      "full_description": "At Twin Oaks Partners every horse is treated like our own. Our team offers acupuncture & alternative therapies services for pleasure riders, amateurs and professionals across the Denver area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Package pricing available",
+        "Same-week appointments",
+        "Free initial consultation",
+        "Written report after every visit"
+      ],
+      "location": {
+        "address": "3463 Spring St, Denver, CO 80254, USA",
+        "city": "Denver, CO",
+        "lat": 39.755735,
+        "lng": -105.074849
+      },
+      "contact": {
+        "phone": "(303) 555-0156",
+        "email": "hello@twinoakspartners.example.com"
+      },
+      "date": "2026-07-16 15:13:00"
+    },
+    {
+      "demo_id": "demo-087",
+      "provider_name": "Sunrise & Co.",
+      "category": "Website Design & Technology",
+      "category_parent": "Equine Services, Media & Events",
+      "services": [
+        "Bilingual (EN/ES)",
+        "Emergency 24/7"
+      ],
+      "short_description": "Trusted website design & technology serving Denver and surrounding barns.",
+      "full_description": "At Sunrise & Co. every horse is treated like our own. Our team offers website design & technology services for pleasure riders, amateurs and professionals across the Denver area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Package pricing available",
+        "Travel within 50 miles",
+        "Written report after every visit",
+        "Same-week appointments"
+      ],
+      "location": {
+        "address": "5668 Broadway, Denver, CO 80217, USA",
+        "city": "Denver, CO",
+        "lat": 39.775693,
+        "lng": -104.987604
+      },
+      "contact": {
+        "phone": "(303) 555-0106",
+        "email": "hello@sunriseandco.example.com"
+      },
+      "date": "2026-05-13 17:26:00"
+    },
+    {
+      "demo_id": "demo-088",
+      "provider_name": "Maple Leaf & Co.",
+      "category": "Breeding Facilities",
+      "category_parent": "Barns, Breeding & Transport",
+      "services": [
+        "Bilingual (EN/ES)",
+        "Mobile Service",
+        "Emergency 24/7"
+      ],
+      "short_description": "Professional breeding facilities with over 22 years of experience.",
+      "full_description": "At Maple Leaf & Co. every horse is treated like our own. Our team offers breeding facilities services for pleasure riders, amateurs and professionals across the Boston area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Digital records & photos",
+        "Package pricing available",
+        "Travel within 50 miles",
+        "Emergency call-outs"
+      ],
+      "location": {
+        "address": "5133 Washington Blvd, Boston, MA 02198, USA",
+        "city": "Boston, MA",
+        "lat": 42.312408,
+        "lng": -70.969626
+      },
+      "contact": {
+        "phone": "(617) 555-0174",
+        "email": "hello@mapleleafandco.example.com"
+      },
+      "date": "2026-06-02 08:18:00"
+    },
+    {
+      "demo_id": "demo-089",
+      "provider_name": "Cedar Creek Services",
+      "category": "Barn & Farm Suppliers",
+      "category_parent": "Retail and Businesses",
+      "services": [
+        "Mobile Service",
+        "Insured & Licensed",
+        "Certified Professional"
+      ],
+      "short_description": "Boston's go-to barn & farm suppliers for show and pleasure horses.",
+      "full_description": "At Cedar Creek Services every horse is treated like our own. Our team offers barn & farm suppliers services for pleasure riders, amateurs and professionals across the Boston area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Digital records & photos",
+        "Travel within 50 miles",
+        "Follow-up call included",
+        "Works with your vet and farrier",
+        "Show-day support"
+      ],
+      "location": {
+        "address": "8803 Main St, Boston, MA 02114, USA",
+        "city": "Boston, MA",
+        "lat": 42.35043,
+        "lng": -70.990058
+      },
+      "contact": {
+        "phone": "(617) 555-0109",
+        "email": "hello@cedarcreekservices.example.com"
+      },
+      "date": "2026-07-17 15:48:00"
+    },
+    {
+      "demo_id": "demo-090",
+      "provider_name": "Pine Valley & Co.",
+      "category": "International Horse Shipping",
+      "category_parent": "Barns, Breeding & Transport",
+      "services": [
+        "Barn Calls",
+        "Show Season Support"
+      ],
+      "short_description": "Trusted international horse shipping serving Boston and surrounding barns.",
+      "full_description": "Pine Valley & Co. has worked with horses and riders around Boston for more than 21 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Digital records & photos",
+        "Package pricing available",
+        "Written report after every visit",
+        "Works with your vet and farrier"
+      ],
+      "location": {
+        "address": "6000 Cedar Ln, Boston, MA 02126, USA",
+        "city": "Boston, MA",
+        "lat": 42.374445,
+        "lng": -71.07665
+      },
+      "contact": {
+        "phone": "(617) 555-0117",
+        "email": "hello@pinevalleyandco.example.com"
+      },
+      "date": "2026-06-20 13:10:00"
+    },
+    {
+      "demo_id": "demo-091",
+      "provider_name": "Cedar Creek Horse Co.",
+      "category": "Equestrian Realtor",
+      "category_parent": "Equine Services, Media & Events",
+      "services": [
+        "Show Season Support",
+        "Certified Professional"
+      ],
+      "short_description": "Boston's go-to equestrian realtor for show and pleasure horses.",
+      "full_description": "At Cedar Creek Horse Co. every horse is treated like our own. Our team offers equestrian realtor services for pleasure riders, amateurs and professionals across the Boston area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Same-week appointments",
+        "Flexible scheduling",
+        "Emergency call-outs",
+        "Show-day support",
+        "Free initial consultation"
+      ],
+      "location": {
+        "address": "5521 Highland Ave, Boston, MA 02166, USA",
+        "city": "Boston, MA",
+        "lat": 42.364628,
+        "lng": -71.021327
+      },
+      "contact": {
+        "phone": "(617) 555-0176",
+        "email": "hello@cedarcreekhorseco.example.com"
+      },
+      "date": "2026-08-09 18:50:00"
+    },
+    {
+      "demo_id": "demo-092",
+      "provider_name": "Bluegrass Services",
+      "category": "Retirement & rescue Facilities",
+      "category_parent": "Barns, Breeding & Transport",
+      "services": [
+        "Emergency 24/7",
+        "Online Booking",
+        "Mobile Service",
+        "Bilingual (EN/ES)"
+      ],
+      "short_description": "Trusted retirement & rescue facilities serving Philadelphia and surrounding barns.",
+      "full_description": "Founded in 2017, Bluegrass Services is a retirement & rescue facilities business built on experience and repeat clients. We travel to barns throughout Philadelphia and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Flexible scheduling",
+        "Written report after every visit",
+        "Works with your vet and farrier",
+        "Travel within 50 miles"
+      ],
+      "location": {
+        "address": "8599 Stable Way, Philadelphia, PA 19149, USA",
+        "city": "Philadelphia, PA",
+        "lat": 39.903289,
+        "lng": -75.132669
+      },
+      "contact": {
+        "phone": "(215) 555-0152",
+        "email": "hello@bluegrassservices.example.com"
+      },
+      "date": "2026-09-25 17:58:00"
+    },
+    {
+      "demo_id": "demo-093",
+      "provider_name": "Fox Run & Co.",
+      "category": "Horse Trailer Dealers",
+      "category_parent": "Retail and Businesses",
+      "services": [
+        "Show Season Support",
+        "Group Discounts",
+        "Free Consultation",
+        "Bilingual (EN/ES)"
+      ],
+      "short_description": "Personal, horse-first horse trailer dealers in the Philadelphia area.",
+      "full_description": "At Fox Run & Co. every horse is treated like our own. Our team offers horse trailer dealers services for pleasure riders, amateurs and professionals across the Philadelphia area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Travel within 50 miles",
+        "Show-day support",
+        "Digital records & photos"
+      ],
+      "location": {
+        "address": "7847 Highland Ave, Philadelphia, PA 19149, USA",
+        "city": "Philadelphia, PA",
+        "lat": 39.926525,
+        "lng": -75.224027
+      },
+      "contact": {
+        "phone": "(215) 555-0138",
+        "email": "hello@foxrunandco.example.com"
+      },
+      "date": "2026-04-10 12:45:00"
+    },
+    {
+      "demo_id": "demo-094",
+      "provider_name": "Sunrise Services",
+      "category": "Rider Physical Therapy / Massage",
+      "category_parent": "Training & Riding",
+      "services": [
+        "Barn Calls",
+        "Free Consultation",
+        "Mobile Service"
+      ],
+      "short_description": "Professional rider physical therapy / massage with over 15 years of experience.",
+      "full_description": "At Sunrise Services every horse is treated like our own. Our team offers rider physical therapy / massage services for pleasure riders, amateurs and professionals across the Philadelphia area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Works with your vet and farrier",
+        "Same-week appointments",
+        "Follow-up call included",
+        "Package pricing available"
+      ],
+      "location": {
+        "address": "9193 Hillside Ave, Philadelphia, PA 19137, USA",
+        "city": "Philadelphia, PA",
+        "lat": 39.899662,
+        "lng": -75.133408
+      },
+      "contact": {
+        "phone": "(215) 555-0183",
+        "email": "hello@sunriseservices.example.com"
+      },
+      "date": "2026-05-24 15:13:00"
+    },
+    {
+      "demo_id": "demo-095",
+      "provider_name": "Fox Run Horse Co.",
+      "category": "Rider Fitness & Wellness",
+      "category_parent": "Training & Riding",
+      "services": [
+        "Weekend Availability",
+        "Online Booking",
+        "Group Discounts",
+        "Mobile Service"
+      ],
+      "short_description": "Friendly, reliable rider fitness & wellness for riders and horses in San Diego.",
+      "full_description": "Fox Run Horse Co. has worked with horses and riders around San Diego for more than 21 years. We focus on clear communication, fair pricing and doing the job right the first time. Whether you keep one horse at home or manage a busy show barn, we will fit around your schedule.",
+      "services_list": [
+        "Flexible scheduling",
+        "Follow-up call included",
+        "Package pricing available"
+      ],
+      "location": {
+        "address": "4460 Cedar Ln, San Diego, CA 92114, USA",
+        "city": "San Diego, CA",
+        "lat": 32.731895,
+        "lng": -117.145471
+      },
+      "contact": {
+        "phone": "(619) 555-0112",
+        "email": "hello@foxrunhorseco.example.com"
+      },
+      "date": "2026-03-01 16:59:00"
+    },
+    {
+      "demo_id": "demo-096",
+      "provider_name": "Iron Gate Services",
+      "category": "Clinicians",
+      "category_parent": "Training & Riding",
+      "services": [
+        "Online Booking",
+        "Weekend Availability",
+        "Mobile Service",
+        "Barn Calls"
+      ],
+      "short_description": "Trusted clinicians serving San Diego and surrounding barns.",
+      "full_description": "Founded in 2007, Iron Gate Services is a clinicians business built on experience and repeat clients. We travel to barns throughout San Diego and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Written report after every visit",
+        "Free initial consultation",
+        "Flexible scheduling",
+        "Package pricing available"
+      ],
+      "location": {
+        "address": "3277 Meadow Ln, San Diego, CA 92142, USA",
+        "city": "San Diego, CA",
+        "lat": 32.685658,
+        "lng": -117.240451
+      },
+      "contact": {
+        "phone": "(619) 555-0123",
+        "email": "hello@irongateservices.example.com"
+      },
+      "date": "2026-05-02 08:19:00"
+    },
+    {
+      "demo_id": "demo-097",
+      "provider_name": "Harbor Studio",
+      "category": "Stall Cleaning services",
+      "category_parent": "Horse Health & Care",
+      "services": [
+        "Certified Professional",
+        "Bilingual (EN/ES)"
+      ],
+      "short_description": "Trusted stall cleaning services serving San Diego and surrounding barns.",
+      "full_description": "At Harbor Studio every horse is treated like our own. Our team offers stall cleaning services services for pleasure riders, amateurs and professionals across the San Diego area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Show-day support",
+        "Written report after every visit",
+        "Free initial consultation",
+        "Follow-up call included",
+        "Works with your vet and farrier"
+      ],
+      "location": {
+        "address": "8102 Cedar Ln, San Diego, CA 92165, USA",
+        "city": "San Diego, CA",
+        "lat": 32.711223,
+        "lng": -117.216394
+      },
+      "contact": {
+        "phone": "(619) 555-0172",
+        "email": "hello@harborstudio.example.com"
+      },
+      "date": "2026-04-06 17:54:00"
+    },
+    {
+      "demo_id": "demo-098",
+      "provider_name": "Iron Gate Studio",
+      "category": "Equine Appraisor",
+      "category_parent": "Equine Services, Media & Events",
+      "services": [
+        "Mobile Service",
+        "Free Consultation"
+      ],
+      "short_description": "Professional equine appraisor with over 14 years of experience.",
+      "full_description": "At Iron Gate Studio every horse is treated like our own. Our team offers equine appraisor services for pleasure riders, amateurs and professionals across the Seattle area. Call or message us to talk about what your horse needs and we will put together a simple plan.",
+      "services_list": [
+        "Travel within 50 miles",
+        "Package pricing available",
+        "Show-day support",
+        "Follow-up call included"
+      ],
+      "location": {
+        "address": "1431 Broadway, Seattle, WA 98186, USA",
+        "city": "Seattle, WA",
+        "lat": 47.549554,
+        "lng": -122.245397
+      },
+      "contact": {
+        "phone": "(206) 555-0138",
+        "email": "hello@irongatestudio.example.com"
+      },
+      "date": "2026-01-09 18:23:00"
+    },
+    {
+      "demo_id": "demo-099",
+      "provider_name": "Golden Stables",
+      "category": "Short-Term / Overnight Stabling",
+      "category_parent": "Barns, Breeding & Transport",
+      "services": [
+        "Group Discounts",
+        "Free Consultation"
+      ],
+      "short_description": "Seattle's go-to short-term / overnight stabling for show and pleasure horses.",
+      "full_description": "Founded in 2008, Golden Stables is a short-term / overnight stabling business built on experience and repeat clients. We travel to barns throughout Seattle and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Emergency call-outs",
+        "Travel within 50 miles",
+        "Experienced with young horses",
+        "Written report after every visit"
+      ],
+      "location": {
+        "address": "5036 Elm St, Seattle, WA 98152, USA",
+        "city": "Seattle, WA",
+        "lat": 47.63225,
+        "lng": -122.255941
+      },
+      "contact": {
+        "phone": "(206) 555-0161",
+        "email": "hello@goldenstables.example.com"
+      },
+      "date": "2026-03-15 17:23:00"
+    },
+    {
+      "demo_id": "demo-100",
+      "provider_name": "Highfield Studio",
+      "category": "Horse Show Officials",
+      "category_parent": "Equine Services, Media & Events",
+      "services": [
+        "Weekend Availability",
+        "Show Season Support",
+        "Emergency 24/7"
+      ],
+      "short_description": "Trusted horse show officials serving Seattle and surrounding barns.",
+      "full_description": "Founded in 2007, Highfield Studio is a horse show officials business built on experience and repeat clients. We travel to barns throughout Seattle and nearby counties and are happy to coordinate with your trainer, vet and barn manager.",
+      "services_list": [
+        "Same-week appointments",
+        "Free initial consultation",
+        "Digital records & photos",
+        "Emergency call-outs",
+        "Travel within 50 miles"
+      ],
+      "location": {
+        "address": "8816 Washington Blvd, Seattle, WA 98198, USA",
+        "city": "Seattle, WA",
+        "lat": 47.570845,
+        "lng": -122.286247
+      },
+      "contact": {
+        "phone": "(206) 555-0173",
+        "email": "hello@highfieldstudio.example.com"
+      },
+      "date": "2026-09-05 10:20:00"
+    }
+  ]
+}
