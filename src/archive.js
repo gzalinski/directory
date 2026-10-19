@@ -1,10 +1,11 @@
 // Directory archive: list view <-> map view on top of FacetWP.
 //
 // Split view like https://facetwp.com/demo/state-parks/:
-// - "View Map" (toolbar) shows cards on the left and a sticky map on the right
-//   and turns map filtering ON: panning / zooming filters the cards.
-// - "Close Map" (top-right of the map, or Esc) returns to full-width cards and
-//   turns map filtering OFF, refreshing the listing if the viewport filtered it.
+// - "View Map" (toolbar toggle) shows cards on the left and the map on the
+//   right, sized so toolbar + cards + map fit one screen (only the cards
+//   column scrolls). Map filtering turns ON: panning / zooming filters cards.
+// - "Close Map" (same toggle, or Esc) returns to full-width cards and turns
+//   map filtering OFF, refreshing the listing if the viewport filtered it.
 //
 // FacetWP JS API used (https://facetwp.com/help-center/developers/javascript-reference/):
 //   FWP.facets, FWP.refresh(), FWP.reset(), FWP.hooks, FWP.settings.pager,
@@ -22,8 +23,9 @@ function init(root) {
   try { labels = JSON.parse(root.dataset.mapLabels || '{}'); } catch (e) {}
 
   const el = {
-    open: root.querySelector('[data-dir-open-map]'),
-    close: root.querySelector('[data-dir-close-map]'),
+    toggle: root.querySelector('[data-dir-toggle-map]'), // "View Map" / "Close Map"
+    toolbar: root.querySelector('.dir-toolbar'),
+    results: root.querySelector('[data-dir-results]'),
     mapview: root.querySelector('.dir-mapview'),
     search: root.querySelector('[data-dir-search]'),
     reset: root.querySelector('[data-dir-reset]'),
@@ -81,6 +83,29 @@ function init(root) {
     });
   }
 
+  /* ---- Screen-fit sizing -------------------------------------------- */
+
+  // Fixed header height above the page, from CSS: --dir-offset-top (px).
+  function offsetTop() {
+    return parseFloat(getComputedStyle(root).getPropertyValue('--dir-offset-top')) || 0;
+  }
+
+  // Height for the split view so toolbar + cards + map fill one screen.
+  // Also sizes the hidden map in list view, so it is fitted before opening.
+  function sizeStage() {
+    const tb = getComputedStyle(el.toolbar);
+    const toolbarH = el.toolbar.offsetHeight + parseFloat(tb.marginBottom || 0);
+    const h = Math.max(420, Math.round(window.innerHeight - offsetTop() - toolbarH - 16));
+    root.style.setProperty('--dir-stage-h', h + 'px');
+  }
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(sizeStage, 100);
+  });
+  sizeStage();
+
   /* ---- Views --------------------------------------------------------- */
 
   function openMap() {
@@ -88,10 +113,12 @@ function init(root) {
     mapMode = true;
     root.classList.add('is-map-view');
     el.mapview.setAttribute('aria-hidden', 'false');
-    el.open.setAttribute('aria-expanded', 'true');
+    el.toggle.setAttribute('aria-expanded', 'true');
+    sizeStage();
     whenMap(() => setFiltering(true));
-    root.querySelector('.dir-stage').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    el.close.focus({ preventScroll: true });
+    // Bring the toolbar to the top of the screen: toolbar + split view fit below it.
+    const y = el.toolbar.getBoundingClientRect().top + window.scrollY - offsetTop();
+    window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
   }
 
   function closeMap() {
@@ -100,7 +127,7 @@ function init(root) {
     refilterAfterLoad = false;
     root.classList.remove('is-map-view');
     el.mapview.setAttribute('aria-hidden', 'true');
-    el.open.setAttribute('aria-expanded', 'false');
+    el.toggle.setAttribute('aria-expanded', 'false');
     setActiveMarker(null);
 
     // Only refresh when the viewport actually filtered the results.
@@ -108,7 +135,7 @@ function init(root) {
     setFiltering(false);
     if (hadBounds && hasFWP()) FWP.refresh();
 
-    el.open.focus({ preventScroll: true });
+    el.results.scrollTop = 0;
   }
 
   /* ---- Distance pill (mirrors the Proximity radius dropdown) --------- */
@@ -205,6 +232,7 @@ function init(root) {
       refilterWhenIdle();
     }
 
+    if (mapMode) el.results.scrollTop = 0;
     syncFilterButton();
     syncDistance();
     syncReset();
@@ -223,8 +251,7 @@ function init(root) {
 
   /* ---- UI ------------------------------------------------------------ */
 
-  el.open.addEventListener('click', openMap);
-  el.close.addEventListener('click', closeMap);
+  el.toggle.addEventListener('click', () => (mapMode ? closeMap() : openMap()));
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && mapMode && !e.target.closest('input, select, textarea')) closeMap();
   });
@@ -232,5 +259,5 @@ function init(root) {
   if (el.reset) el.reset.addEventListener('click', () => hasFWP() && FWP.reset());
 
   // Without FacetWP the listing still works; the map button has nothing to show.
-  if (!document.querySelector('.facetwp-type-map, .facetwp-facet-' + MAP)) el.open.hidden = true;
+  if (!document.querySelector('.facetwp-type-map, .facetwp-facet-' + MAP)) el.toggle.hidden = true;
 }

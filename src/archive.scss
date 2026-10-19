@@ -30,8 +30,9 @@ $chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' widt
 .directory-archive {
   --dir-split-gap: 2rem;            // space between cards and map
   --dir-map-share: 0.53;            // map column width in split view
-  --dir-sticky-top: 1rem;           // add your sticky header height here
-  --dir-map-h: max(460px, calc(100vh - 2 * var(--dir-sticky-top)));
+  --dir-offset-top: 0px;            // fixed site header height (px), set by the theme
+  // Split view height; JS sets it so toolbar + cards + map fit one screen.
+  --dir-stage-h: max(420px, calc(100vh - var(--dir-offset-top) - 110px));
   color: $text;
   padding: 2rem 0 4rem;
   font-size: 0.95rem;
@@ -146,9 +147,11 @@ $chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' widt
     &:hover .dir-map-preview__btn { background: $navy-dark; }
   }
   .dir-map-preview__btn {
-    display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.45rem 0.9rem;
+    display: inline-flex; align-items: center; padding: 0.45rem 0.9rem;
     background: $navy; color: #fff; font-size: 0.75rem; font-weight: 500;
   }
+  .dir-map-preview__open, .dir-map-preview__close { display: inline-flex; align-items: center; gap: 0.45rem; }
+  .dir-map-preview__close { display: none; }
 
   // ---- Stage: list + map share one box ------------------------------------
   .dir-stage { position: relative; }
@@ -216,7 +219,7 @@ $chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' widt
   .dir-mapview {
     position: absolute; top: 0; right: 0;
     width: calc((100% - var(--dir-split-gap)) * var(--dir-map-share));
-    height: var(--dir-map-h);
+    height: var(--dir-stage-h);
     visibility: hidden; pointer-events: none;
     background: #e9e7e1;
   }
@@ -234,30 +237,29 @@ $chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' widt
     &:hover, &.enabled { background: $bg; }
   }
 
-  .dir-map-close {
-    position: absolute; top: 0.9rem; right: 0.9rem; z-index: 6;
-    display: inline-flex; align-items: center; gap: 0.6rem;
-    padding: 0.5rem 0.9rem; background: $navy; color: #fff; border: 0; border-radius: 2px;
-    font-size: 0.8rem; font-weight: 500; cursor: pointer; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
-    &:hover { background: $navy-dark; }
-  }
-
   &:not(.is-map-view) .dir-stage { overflow: clip; overflow-clip-margin: 6px; }
 
-  // Split view: cards left, sticky map right (like the FacetWP State Parks demo).
+  // Split view: toolbar + cards + map fit one screen (like the FacetWP State
+  // Parks demo). The page does not scroll; the cards column scrolls inside.
   &.is-map-view {
-    .dir-map-preview { visibility: hidden; } // "Close Map" lives on the map
+    // Same toolbar toggle, now reading "Close Map".
+    .dir-map-preview__open { display: none; }
+    .dir-map-preview__close { display: inline-flex; }
     .dir-stage {
-      display: grid;
+      display: grid; height: var(--dir-stage-h);
       grid-template-columns: minmax(0, 1fr) calc((100% - var(--dir-split-gap)) * var(--dir-map-share));
       gap: var(--dir-split-gap);
       align-items: start;
     }
     .dir-mapview {
-      position: sticky; top: var(--dir-sticky-top); grid-column: 2; grid-row: 1;
-      width: auto; visibility: visible; pointer-events: auto;
+      position: relative; grid-column: 2; grid-row: 1;
+      width: auto; height: 100%; visibility: visible; pointer-events: auto;
     }
-    .dir-results { grid-column: 1; grid-row: 1; }
+    .dir-results {
+      grid-column: 1; grid-row: 1; height: 100%;
+      overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable;
+    }
+    .dir-pager { padding-bottom: 0.5rem; }
 
     // Cards stack vertically in the narrow column (design: split view).
     .dir-card-row {
@@ -279,9 +281,11 @@ $chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' widt
 
     // No room for two columns: the map sits above the cards instead.
     .dir-mapview { width: 100%; height: 60vh; }
+    // Normal page scroll on small screens.
     &.is-map-view {
-      .dir-stage { display: flex; flex-direction: column; gap: 1rem; }
-      .dir-mapview { position: relative; top: auto; width: 100%; height: 60vh; }
+      .dir-stage { display: flex; flex-direction: column; gap: 1rem; height: auto; }
+      .dir-mapview { position: relative; width: 100%; height: 60vh; }
+      .dir-results { height: auto; overflow: visible; }
     }
   }
   @media (max-width: 767px) {

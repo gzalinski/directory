@@ -4,10 +4,11 @@
  *
  * Two views share one FacetWP listing (like facetwp.com/demo/state-parks):
  *  - List view:  full-width cards + pager, a map preview with "View Map".
- *  - Split view: cards + pager on the left, a sticky Map facet on the right
- *                with "Close Map" top-right. Map filtering (viewport =
- *                filter) is on while the map is open and off after closing
- *                (see src/archive.js).
+ *  - Split view: toolbar + cards + map fit one screen; cards + pager scroll
+ *                inside the left column, the Map facet fills the right one.
+ *                The same toolbar button reads "Close Map". Map filtering
+ *                (viewport = filter) is on while the map is open and off
+ *                after closing (see src/archive.js).
  *
  * Rules from the FacetWP docs: facets stay OUTSIDE .facetwp-template, and
  * the Map facet must be on the page in both views (it is only hidden).
@@ -66,9 +67,12 @@ $title  = $term ? $term->name : 'Provider Directory';
                 <span class="dir-toolbar__label">Sort by:</span>
                 <?php echo directory_facet( 'sort' ); // phpcs:ignore ?>
             </div>
-            <!-- List view only: opens the split view (cards left, map right). -->
-            <button type="button" class="dir-map-preview" data-dir-open-map aria-controls="dir-mapview" aria-expanded="false">
-                <span class="dir-map-preview__btn"><i class="fa-regular fa-map" aria-hidden="true"></i> View Map</span>
+            <!-- One toggle: "View Map" in list view, "Close Map" in split view. -->
+            <button type="button" class="dir-map-preview" data-dir-toggle-map aria-controls="dir-mapview" aria-expanded="false">
+                <span class="dir-map-preview__btn">
+                    <span class="dir-map-preview__open"><i class="fa-regular fa-map" aria-hidden="true"></i> View Map</span>
+                    <span class="dir-map-preview__close">Close Map <i class="fa-solid fa-xmark" aria-hidden="true"></i></span>
+                </span>
             </button>
         </div>
 
@@ -86,12 +90,9 @@ $title  = $term ? $term->name : 'Provider Directory';
                 <div class="dir-pager"><?php echo directory_facet( 'pager' ); // phpcs:ignore ?></div>
             </div>
 
-            <!-- Split view: sticky map on the right. Hidden (but rendered) in list view. -->
+            <!-- Split view: map on the right. Hidden (but rendered) in list view. -->
             <div class="dir-mapview" id="dir-mapview" aria-hidden="true">
                 <?php echo directory_facet( 'map' ); // phpcs:ignore ?>
-                <button type="button" class="dir-map-close" data-dir-close-map>
-                    Close Map <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-                </button>
             </div>
         </div>
 
