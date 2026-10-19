@@ -16,12 +16,12 @@ $card = directory_card_data( get_the_ID() );
         <div class="dir-card-row__title">
             <h2><a href="<?php echo esc_url( $card['url'] ); ?>"><?php echo esc_html( $card['name'] ); ?></a></h2>
             <?php if ( $card['category'] ) : ?>
-                <span class="dir-dot"></span>
+                <span class="dir-dot" aria-hidden="true"></span>
                 <span class="dir-pill"><?php echo esc_html( $card['category']->name ); ?></span>
             <?php endif; ?>
         </div>
-        <?php echo directory_rating_html( $card['rating'] ); // phpcs:ignore ?>
-        <?php echo directory_location_html( $card ); // phpcs:ignore ?>
+        <?php directory_template( 'parts/rating', array( 'rating' => $card['rating'] ) ); ?>
+        <?php directory_template( 'parts/location', array( 'card' => $card ) ); ?>
     </div>
 
     <div class="dir-card-row__about">

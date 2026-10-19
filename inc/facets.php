@@ -122,7 +122,9 @@ function directory_facet_definitions() {
             'default_lat'    => '39.8283', // USA center, used when there are no markers
             'default_lng'    => '-98.5795',
             'default_zoom'   => '4',
-            'marker_content' => '',        // built by the facetwp_map_marker_content hook
+            // Popup: evaluated by FacetWP with $post set. The facetwp_map_marker_content
+            // hook (FacetWP v4.6+) renders the same template.
+            'marker_content' => '<?php echo directory_map_popup_html( $post->ID ); ?>',
         ),
 
         'pager' => array(

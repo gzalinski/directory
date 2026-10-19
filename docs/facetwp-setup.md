@@ -57,9 +57,13 @@ Notes:
   first automatically (`pre_get_posts` in `inc/archive.php`).
 - The Proximity radius dropdown is hidden in the search bar and mirrored as the
   "Distance" pill; FacetWP still reads the original select.
-- "Rating" is not wired: there is no review data yet. Return
-  `array( 'avg' => 4.5, 'count' => 83 )` from the `directory_listing_rating`
-  filter to show it on cards and map popups.
+- Rating is TEMPORARILY hard-coded to "4.5 · 85 Reviews" in
+  `directory_listing_rating()` (inc/archive.php). Replace it with real data
+  through the `directory_listing_rating` filter (return null to hide it).
+- Map popup: `templates/parts/map-popup.php`, used both by the
+  `facetwp_map_marker_content` hook and the map facet's "Info window content".
+- Map marker: `assets/icons/marker.svg` via `markerHtml`; navy by default,
+  #B98F5C on hover and while its popup is open (CSS + `src/archive.js`).
 - Map styling: FacetWP's map no longer accepts JSON styles. Create a Map ID with
   a style in Google Cloud Console and set it in the `directory_map` facet.
 

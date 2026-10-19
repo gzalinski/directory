@@ -1,9 +1,10 @@
 // Directory archive: list view <-> map view on top of FacetWP.
 //
+// One toggle button in the toolbar (the map preview):
 // - "View Map" hides cards + pager, shows the Map facet full width and turns
 //   map filtering ON (the map viewport becomes a filter).
-// - "Close Map" (or Esc) returns to cards + pager and turns map filtering OFF,
-//   refreshing the listing if a viewport filter had been applied.
+// - "Close Map" (same button, or Esc) returns to cards + pager and turns map
+//   filtering OFF, refreshing the listing if a viewport filter had been applied.
 //
 // FacetWP JS API used (https://facetwp.com/help-center/developers/javascript-reference/):
 //   FWP.facets, FWP.refresh(), FWP.reset(), FWP.hooks, FWP.settings.pager,
@@ -16,14 +17,12 @@ if (root) init(root);
 function init(root) {
   const MAP = root.dataset.mapFacet;
   const PROX = root.dataset.proximityFacet;
-  const POS_KEY = 'directoryVisitorPos'; // shared with single.js
   // Map filtering button labels from directory_map_button_labels() (inc/facets.php).
   let labels = {};
   try { labels = JSON.parse(root.dataset.mapLabels || '{}'); } catch (e) {}
 
   const el = {
-    open: root.querySelector('[data-dir-open-map]'),
-    close: root.querySelector('[data-dir-close-map]'),
+    toggle: root.querySelector('[data-dir-toggle-map]'), // "View Map" / "Close Map"
     mapview: root.querySelector('.dir-mapview'),
     count: root.querySelector('[data-dir-map-count]'),
     search: root.querySelector('[data-dir-search]'),
@@ -89,11 +88,10 @@ function init(root) {
     mapMode = true;
     root.classList.add('is-map-view');
     el.mapview.setAttribute('aria-hidden', 'false');
-    el.open.setAttribute('aria-expanded', 'true');
+    el.toggle.setAttribute('aria-expanded', 'true');
     whenMap(() => setFiltering(true));
     updateCount();
-    root.querySelector('.dir-stage').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    el.close.focus({ preventScroll: true });
+    root.querySelector('.dir-toolbar').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   function closeMap() {
@@ -102,14 +100,14 @@ function init(root) {
     refilterAfterLoad = false;
     root.classList.remove('is-map-view');
     el.mapview.setAttribute('aria-hidden', 'true');
-    el.open.setAttribute('aria-expanded', 'false');
+    el.toggle.setAttribute('aria-expanded', 'false');
+    setActiveMarker(null);
 
     // Only refresh when the viewport actually filtered the results.
     const hadBounds = facetValue(MAP).length > 0;
     setFiltering(false);
     if (hadBounds && hasFWP()) FWP.refresh();
 
-    el.open.focus({ preventScroll: true });
     root.querySelector('.dir-toolbar').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
 
@@ -143,53 +141,35 @@ function init(root) {
     src.dispatchEvent(new Event('change', { bubbles: true }));
   });
 
-  /* ---- Client-side distance on cards (no location entered) ----------- */
+  /* ---- Active marker (#B98F5C while its popup is open) ---------------- */
 
-  function miles([lat1, lng1], [lat2, lng2]) {
-    const rad = (d) => (d * Math.PI) / 180;
-    const a =
-      Math.sin(rad(lat2 - lat1) / 2) ** 2 +
-      Math.cos(rad(lat1)) * Math.cos(rad(lat2)) * Math.sin(rad(lng2 - lng1) / 2) ** 2;
-    return 2 * 3958.8 * Math.asin(Math.sqrt(a));
+  // Markers are <span class="dir-marker"> (facetwp_map_marker_args markerHtml).
+  // Hover color is pure CSS; "open" needs a class because the popup is a
+  // Google info window, so we watch for it appearing / disappearing.
+  let activeMarker = null;
+
+  function setActiveMarker(marker) {
+    if (activeMarker && activeMarker !== marker) activeMarker.classList.remove('is-active');
+    activeMarker = marker;
+    if (marker) marker.classList.add('is-active');
   }
 
-  function formatMiles(d) {
-    return (d < 0.1 ? '<0.1' : d < 10 ? d.toFixed(1) : Math.round(d).toLocaleString('en-US')) + ' miles';
-  }
-
-  function fillDistances(pos) {
-    root.querySelectorAll('.dir-card-row[data-latlng]').forEach((card) => {
-      const slot = card.querySelector('.dir-loc__distance');
-      if (!slot || slot.hasAttribute('data-server')) return; // FacetWP distance wins
-      const target = card.dataset.latlng.split(',').map(parseFloat);
-      if (target.length !== 2 || target.some(isNaN)) return;
-      slot.querySelector('[data-distance]').textContent = formatMiles(miles(pos, target));
-      slot.hidden = false;
-    });
-  }
-
-  // Never prompts: uses a cached position or an already-granted permission.
-  async function visitorDistances() {
-    try {
-      const cached = JSON.parse(sessionStorage.getItem(POS_KEY));
-      if (cached && cached.length === 2) return fillDistances(cached);
-    } catch (e) {}
-    if (!window.isSecureContext || !navigator.geolocation || !navigator.permissions) return;
-    try {
-      const state = await navigator.permissions.query({ name: 'geolocation' });
-      if (state.state !== 'granted') return;
-    } catch (e) {
-      return;
-    }
-    navigator.geolocation.getCurrentPosition(
-      ({ coords }) => {
-        const pos = [coords.latitude, coords.longitude];
-        try { sessionStorage.setItem(POS_KEY, JSON.stringify(pos)); } catch (e) {}
-        fillDistances(pos);
+  function watchMarkers() {
+    const mapEl = el.mapview.querySelector('#facetwp-map') || el.mapview;
+    mapEl.addEventListener(
+      'click',
+      (e) => {
+        const marker = e.target.closest('.dir-marker');
+        if (marker) setActiveMarker(marker);
       },
-      () => {},
-      { timeout: 10000, maximumAge: 600000 }
+      true
     );
+    // Popup closed (X button, map click, refresh): clear the active marker.
+    new MutationObserver(() => {
+      if (activeMarker && (!activeMarker.isConnected || !mapEl.querySelector('.gm-style-iw'))) {
+        setActiveMarker(null);
+      }
+    }).observe(mapEl, { childList: true, subtree: true });
   }
 
   /* ---- "Clear filters" visibility ------------------------------------ */
@@ -237,7 +217,6 @@ function init(root) {
     syncDistance();
     syncReset();
     updateCount();
-    visitorDistances();
   });
 
   document.addEventListener('facetwp-maps-loaded', () => {
@@ -249,10 +228,11 @@ function init(root) {
     syncFilterButton();
   });
 
+  whenMap(watchMarkers);
+
   /* ---- UI ------------------------------------------------------------ */
 
-  el.open.addEventListener('click', openMap);
-  el.close.addEventListener('click', closeMap);
+  el.toggle.addEventListener('click', () => (mapMode ? closeMap() : openMap()));
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && mapMode && !e.target.closest('input, select, textarea')) closeMap();
   });
@@ -260,5 +240,5 @@ function init(root) {
   if (el.reset) el.reset.addEventListener('click', () => hasFWP() && FWP.reset());
 
   // Without FacetWP the listing still works; the map button has nothing to show.
-  if (!document.querySelector('.facetwp-type-map, .facetwp-facet-' + MAP)) el.open.hidden = true;
+  if (!document.querySelector('.facetwp-type-map, .facetwp-facet-' + MAP)) el.toggle.hidden = true;
 }

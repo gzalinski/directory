@@ -173,79 +173,75 @@ function directory_card_data( $post_id ) {
         'short'       => $short,
         'distance'    => false !== $distance && null !== $distance ? (float) $distance : null,
         'message_url' => $message_url,
-        // Reviews do not exist yet: return array( 'avg' => 4.5, 'count' => 83 ) from this filter once they do.
-        'rating'      => apply_filters( 'directory_listing_rating', null, $post_id ),
+        'rating'      => directory_listing_rating( $post_id ),
     );
 }
 
-/** Rating line ("★ 4.5 · 83 Reviews"), empty until review data exists. */
-function directory_rating_html( $rating ) {
-    if ( empty( $rating['count'] ) ) {
-        return '';
+/**
+ * Rating shown on cards and map popups.
+ * TEMPORARY: hard-coded until reviews exist. Return real data (or null to
+ * hide the line) from the `directory_listing_rating` filter.
+ */
+function directory_listing_rating( $post_id ) {
+    return apply_filters( 'directory_listing_rating', array( 'avg' => 4.5, 'count' => 85 ), $post_id );
+}
+
+/** Inline SVG from assets/icons/{name}.svg (cached per request). */
+function directory_icon( $name ) {
+    static $cache = array();
+    if ( ! isset( $cache[ $name ] ) ) {
+        $file           = TCK_DIRECTORY_PATH . 'assets/icons/' . sanitize_file_name( $name ) . '.svg';
+        $cache[ $name ] = is_readable( $file ) ? trim( file_get_contents( $file ) ) : '';
     }
-    return sprintf(
-        '<div class="dir-rating"><i class="fa-solid fa-star" aria-hidden="true"></i> %s <span class="dir-dot"></span> <span class="dir-rating__count">%s</span></div>',
-        esc_html( number_format_i18n( (float) $rating['avg'], 1 ) ),
-        esc_html( sprintf( _n( '%s Review', '%s Reviews', (int) $rating['count'] ), number_format_i18n( (int) $rating['count'] ) ) )
-    );
+    return $cache[ $name ];
 }
 
-/** "2.3 miles · Wellington, FL" line. The distance slot stays in the DOM so JS can fill it. */
+/** Rating line ("★ 4.5 · 85 Reviews"). Markup: templates/parts/rating.php */
+function directory_rating_html( $rating ) {
+    return directory_get_template( 'parts/rating', array( 'rating' => $rating ) );
+}
+
+/** "[icon] 2.3 miles · Wellington, FL". Markup: templates/parts/location.php */
 function directory_location_html( $card ) {
-    $has = null !== $card['distance'];
-    $html  = '<div class="dir-loc">';
-    $html .= '<i class="fa-solid fa-location-dot" aria-hidden="true"></i>';
-    $html .= '<span class="dir-loc__distance"' . ( $has ? ' data-server' : ' hidden' ) . '>';
-    $html .= '<strong data-distance>' . ( $has ? esc_html( directory_format_miles( $card['distance'] ) ) : '' ) . '</strong>';
-    $html .= $card['city'] ? '<span class="dir-dot"></span>' : '';
-    $html .= '</span>';
-    $html .= esc_html( $card['city'] );
-    $html .= '</div>';
-    return $html;
+    return directory_get_template( 'parts/location', array( 'card' => $card ) );
+}
+
+/** Map popup HTML for one listing. Markup: templates/parts/map-popup.php */
+function directory_map_popup_html( $post_id ) {
+    return directory_get_template( 'parts/map-popup', array( 'card' => directory_card_data( $post_id ) ) );
 }
 
 /* -------------------------------------------------------------------------
- * FacetWP map: marker info window (FacetWP v4.6+)
+ * FacetWP map: popup content + custom marker
  * https://facetwp.com/help-center/facets/facet-types/map/advanced-map-customizations/customize-marker-info-windows/
+ * https://facetwp.com/help-center/facets/facet-types/map/advanced-map-customizations/customize-advanced-markers/
+ *
+ * The popup is also set as the map facet's "Info window content" setting
+ * (inc/facets.php), so it renders on FacetWP versions without this hook.
  * ---------------------------------------------------------------------- */
 
-add_filter( 'facetwp_map_marker_content', function ( $content, $post_id, $facet_name ) {
-    $names = directory_facet_names();
-    if ( $facet_name !== $names['map'] || 'directory' !== get_post_type( $post_id ) ) {
+/** Accept the facet as a name or as a settings array. */
+function directory_is_map_facet( $facet ) {
+    $name = is_array( $facet ) ? ( $facet['name'] ?? '' ) : (string) $facet;
+    return directory_facet_names()['map'] === $name;
+}
+
+add_filter( 'facetwp_map_marker_content', function ( $content, $post_id, $facet_name = '' ) {
+    if ( 'directory' !== get_post_type( $post_id ) || ( $facet_name && ! directory_is_map_facet( $facet_name ) ) ) {
         return $content;
     }
-
-    $card = directory_card_data( $post_id );
-    ob_start();
-    ?>
-    <div class="dir-iw">
-        <div class="dir-iw__head">
-            <div class="dir-iw__avatar"><?php echo directory_avatar_html( $post_id, 48 ); // phpcs:ignore ?></div>
-            <div class="dir-iw__info">
-                <div class="dir-iw__title">
-                    <strong><?php echo esc_html( $card['name'] ); ?></strong>
-                    <?php if ( $card['category'] ) : ?>
-                        <span class="dir-dot"></span><span class="dir-pill"><?php echo esc_html( $card['category']->name ); ?></span>
-                    <?php endif; ?>
-                </div>
-                <?php echo directory_rating_html( $card['rating'] ); // phpcs:ignore ?>
-                <?php echo directory_location_html( $card ); // phpcs:ignore ?>
-            </div>
-        </div>
-        <a class="dir-btn dir-btn--block" href="<?php echo esc_url( $card['url'] ); ?>">View Profile</a>
-    </div>
-    <?php
-    return ob_get_clean();
+    return directory_map_popup_html( $post_id );
 }, 10, 3 );
 
-/** Info window sizing + accessible label. */
+/** Custom SVG marker (colored with CSS: navy, #B98F5C on hover / open) + popup size. */
 add_filter( 'facetwp_map_marker_args', function ( $args, $post_id ) {
     if ( 'directory' !== get_post_type( $post_id ) ) {
         return $args;
     }
+    $args['markerHtml'] = '<span class="dir-marker" data-post-id="' . (int) $post_id . '">' . directory_icon( 'marker' ) . '</span>';
     $args['infoWindowOptions'] = array(
-        'minWidth'  => 280,
-        'maxWidth'  => 340,
+        'minWidth'  => 300,
+        'maxWidth'  => 480,
         'ariaLabel' => get_the_title( $post_id ),
     );
     return $args;

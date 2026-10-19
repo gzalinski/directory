@@ -66,8 +66,12 @@ $title  = $term ? $term->name : 'Provider Directory';
                 <span class="dir-toolbar__label">Sort by:</span>
                 <?php echo directory_facet( 'sort' ); // phpcs:ignore ?>
             </div>
-            <button type="button" class="dir-map-preview" data-dir-open-map aria-controls="dir-mapview" aria-expanded="false">
-                <span class="dir-map-preview__btn"><i class="fa-regular fa-map" aria-hidden="true"></i> View Map</span>
+            <!-- One toggle: "View Map" in list view, "Close Map" in map view. -->
+            <button type="button" class="dir-map-preview" data-dir-toggle-map aria-controls="dir-mapview" aria-expanded="false">
+                <span class="dir-map-preview__btn">
+                    <span class="dir-map-preview__open"><i class="fa-regular fa-map" aria-hidden="true"></i> View Map</span>
+                    <span class="dir-map-preview__close">Close Map <i class="fa-solid fa-xmark" aria-hidden="true"></i></span>
+                </span>
             </button>
         </div>
 
@@ -88,9 +92,6 @@ $title  = $term ? $term->name : 'Provider Directory';
             <div class="dir-mapview" id="dir-mapview" aria-hidden="true">
                 <?php echo directory_facet( 'map' ); // phpcs:ignore ?>
                 <div class="dir-map-count" data-dir-map-count aria-live="polite"></div>
-                <button type="button" class="dir-map-close" data-dir-close-map>
-                    Close Map <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-                </button>
             </div>
         </div>
 
