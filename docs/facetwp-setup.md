@@ -74,7 +74,7 @@ Modelled on https://facetwp.com/demo/state-parks/.
 | Action | Result |
 |---|---|
 | Default | Full-width cards + pager; small map preview with **View Map**. |
-| **View Map** | Split view: toolbar + cards + map fit one screen (no page scroll). Cards + pager scroll inside the left column; map on the right. Map filtering turns **on**: panning / zooming filters the cards. |
+| **View Map** | Split view: cards + pager on the left (normal page scroll), map on the right, sticky so it stays in view. Map filtering turns **on**: panning / zooming filters the cards. |
 | **Close Map** (same toolbar button) or Esc | Back to full-width cards; map filtering turns **off** and the listing refreshes if the viewport had filtered it. |
 | New location in split view | Filtering pauses for that request so the map can zoom to the location, then turns back on. |
 | **Search this area** with a location entered | The map area replaces the location: the Proximity location is cleared for that search (both together would AND to "no results"). |
@@ -83,8 +83,9 @@ Modelled on https://facetwp.com/demo/state-parks/.
 
 Layout knobs (CSS custom properties on `.directory-archive`):
 `--dir-map-share` (map column width, default 0.53), `--dir-split-gap`,
-`--dir-offset-top` (fixed site header height in px, e.g. `80px`, so the
-split view fits below it). JS sets `--dir-stage-h` from the window height.
+`--dir-offset-top` (fixed site header height in px, e.g. `80px`: the sticky
+map sits below it), `--dir-sticky-gap` (space above/below the sticky map).
+The sticky map needs no `overflow: hidden` on the theme wrappers around it.
 
 The map stays rendered (invisible) in list view, in the same box it uses in
 split view, so it is already fitted to the markers when opened.

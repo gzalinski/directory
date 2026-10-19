@@ -1,9 +1,9 @@
 // Directory archive: list view <-> map view on top of FacetWP.
 //
 // Split view like https://facetwp.com/demo/state-parks/:
-// - "View Map" (toolbar toggle) shows cards on the left and the map on the
-//   right, sized so toolbar + cards + map fit one screen (only the cards
-//   column scrolls). Map filtering turns ON: panning / zooming filters cards.
+// - "View Map" (toolbar toggle) shows cards on the left and a sticky map on
+//   the right; the page scrolls the cards. Map filtering turns ON: panning /
+//   zooming filters the cards.
 // - "Close Map" (same toggle, or Esc) returns to full-width cards and turns
 //   map filtering OFF, refreshing the listing if the viewport filtered it.
 //
@@ -83,28 +83,16 @@ function init(root) {
     });
   }
 
-  /* ---- Screen-fit sizing -------------------------------------------- */
-
   // Fixed header height above the page, from CSS: --dir-offset-top (px).
   function offsetTop() {
     return parseFloat(getComputedStyle(root).getPropertyValue('--dir-offset-top')) || 0;
   }
 
-  // Height for the split view so toolbar + cards + map fill one screen.
-  // Also sizes the hidden map in list view, so it is fitted before opening.
-  function sizeStage() {
-    const tb = getComputedStyle(el.toolbar);
-    const toolbarH = el.toolbar.offsetHeight + parseFloat(tb.marginBottom || 0);
-    const h = Math.max(420, Math.round(window.innerHeight - offsetTop() - toolbarH - 16));
-    root.style.setProperty('--dir-stage-h', h + 'px');
+  // Scroll the page so `node` sits just below the fixed header.
+  function scrollToNode(node) {
+    const y = node.getBoundingClientRect().top + window.scrollY - offsetTop() - 8;
+    window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
   }
-
-  let resizeTimer;
-  window.addEventListener('resize', () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(sizeStage, 100);
-  });
-  sizeStage();
 
   /* ---- Views --------------------------------------------------------- */
 
@@ -114,11 +102,8 @@ function init(root) {
     root.classList.add('is-map-view');
     el.mapview.setAttribute('aria-hidden', 'false');
     el.toggle.setAttribute('aria-expanded', 'true');
-    sizeStage();
     whenMap(() => setFiltering(true));
-    // Bring the toolbar to the top of the screen: toolbar + split view fit below it.
-    const y = el.toolbar.getBoundingClientRect().top + window.scrollY - offsetTop();
-    window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+    scrollToNode(el.toolbar);
   }
 
   function closeMap() {
@@ -135,7 +120,6 @@ function init(root) {
     setFiltering(false);
     if (hadBounds && hasFWP()) FWP.refresh();
 
-    el.results.scrollTop = 0;
   }
 
   /* ---- Distance pill (mirrors the Proximity radius dropdown) --------- */
@@ -262,7 +246,8 @@ function init(root) {
       refilterWhenIdle();
     }
 
-    if (mapMode) el.results.scrollTop = 0;
+    // New results while scrolled down the cards: back to the first card.
+    if (mapMode && el.results.getBoundingClientRect().top < offsetTop()) scrollToNode(el.toolbar);
     syncFilterButton();
     syncDistance();
     syncReset();
