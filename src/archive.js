@@ -249,6 +249,19 @@ function init(root) {
 
   whenMap(watchMarkers);
 
+  // Ctrl + mouse wheel over the map zooms the map only: the page must not
+  // scroll (or browser-zoom). Listening on window in the bubble phase lets
+  // Google Maps handle the wheel first; we only cancel the browser default.
+  window.addEventListener(
+    'wheel',
+    (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.target instanceof Element && el.mapview.contains(e.target)) {
+        e.preventDefault();
+      }
+    },
+    { passive: false }
+  );
+
   /* ---- UI ------------------------------------------------------------ */
 
   el.toggle.addEventListener('click', () => (mapMode ? closeMap() : openMap()));
