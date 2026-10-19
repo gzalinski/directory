@@ -1,0 +1,358 @@
+.directory-form {
+  max-width: 640px;
+  margin: 0 auto;
+}
+.directory-form .df-field {
+  margin-bottom: 1.25rem;
+}
+.directory-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+.directory-form input[type="text"],
+.directory-form input[type="email"],
+.directory-form input[type="file"],
+.directory-form select,
+.directory-form textarea {
+  width: 100%;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid #d0d5dd;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+.directory-form .df-count {
+  float: right;
+  font-weight: 400;
+  color: #667085;
+  font-size: 0.85rem;
+}
+.directory-form .df-cat-tree,
+.directory-form .df-cat-tree ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.directory-form .df-cat-tree {
+  border: 1px solid #d0d5dd;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  max-height: 260px;
+  overflow-y: auto;
+}
+.directory-form .df-cat-tree li {
+  margin: 0.3rem 0;
+}
+.directory-form .df-cat-tree .df-cat-children {
+  margin-left: 1.4rem;
+  border-left: 1px dashed #d0d5dd;
+  padding-left: 0.75rem;
+}
+.directory-form .df-checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+.directory-form .df-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 400;
+}
+.directory-form .df-repeater-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.directory-form .df-repeater-remove {
+  flex: 0 0 auto;
+  width: 2.25rem;
+  border: 1px solid #d0d5dd;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+.directory-form .df-btn-secondary,
+.directory-form .df-btn-primary {
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+.directory-form .df-btn-secondary {
+  background: #f2f4f7;
+  color: #344054;
+}
+.directory-form .df-btn-primary {
+  background: #1a56db;
+  color: #fff;
+  font-size: 1rem;
+}
+.directory-form .df-btn-primary:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.directory-form .df-contact {
+  border: 1px solid #eaecf0;
+  border-radius: 8px;
+  padding: 1rem 1.25rem 0.25rem;
+}
+.directory-form .df-contact legend {
+  font-weight: 600;
+  padding: 0 0.4rem;
+}
+.directory-form-status {
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  background: #ecfdf3;
+  color: #027a48;
+  margin-bottom: 1rem;
+}
+.directory-form-status.is-error {
+  background: #fef3f2;
+  color: #b42318;
+}
+:root {
+    --avatar-primary: #502C70;
+    --avatar-bg: #fff;
+    --avatar-gray: gray;
+}
+
+.avatar-upload {
+    background-color: var(--avatar-bg);
+    margin: 0 auto;
+    padding: 20px;
+    color: black;
+}
+
+
+.avatar-upload__preview {
+    display: none;
+    text-align: center;
+    background: var(--avatar-bg);
+}
+
+.avatar-upload__input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.avatar-upload__wrap {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    padding-bottom: 50%;
+    border: 1px dashed var(--avatar-gray);
+    position: relative;
+    overflow: hidden;
+}
+
+.avatar-upload__wrap:hover {
+    border-color: var(--avatar-primary);
+}
+
+
+.avatar-title__wrap {
+    padding: 0 15px 15px 15px;
+}
+
+.upload-text {
+    display: inline-block;
+    position: absolute;
+    padding-left: 30px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-transform: uppercase;
+}
+
+.upload-text img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.avatar-upload__image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.avatar-upload__controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.avatar-upload #avatar-remove {
+    display: none;
+}
+
+
+.has-avatar .avatar-upload__preview,
+.has-avatar #avatar-remove {
+    display: block !important;
+}
+
+.has-avatar .avatar-upload__wrap {
+    border-style: solid;
+    border-color: var(--avatar-gray) !important;
+}
+
+.avatar-upload.uploaded #avatar-load {
+    display: none !important;
+}
+
+
+.loading {
+    pointer-events: none !important;
+}
+
+.modal-footer #crop {
+    position: relative;
+}
+
+.loading .avatar-loader {
+    display: block;
+}
+
+/**
+ LOADER
+ */
+.avatar-loader {
+    display: none;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #fff;
+    border-bottom-color: var(--avatar-primary);
+    border-radius: 50%;
+    animation: rotation 1s linear infinite;
+
+    position: absolute;
+    z-index: 100;
+    top: 15px;
+    right: 20px;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+
+.modal-cropper {
+    max-width: 1024px;
+    width: 100%;
+}
+
+
+.modal-cropper h3 {
+    margin-top: 0;
+}
+
+.modal-cropper .img-crop-wrapper {
+    max-height: 60vh;
+}
+
+.modal-cropper .modal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 420px;
+    margin-top: 15px;
+}
+
+@media screen and (max-width: 767px ) {
+    .modal-cropper {
+        padding: 20px;
+    }
+
+    .modal-cropper .modal-footer .button {
+        width: calc(50% - 5px);
+        flex: 0 0 calc(50% - 5px);
+        margin-top: 15px;
+        min-width: auto;
+    }
+}
+
+
+@media screen and (min-width: 768px ) {
+
+}
+/* Directory: square 150x150 avatar box */
+.directory-form .avatar-upload {
+  padding: 0;
+  .avatar-upload__wrap {
+    width: 150px;
+    padding-bottom: 150px;
+    margin-top: 10px;
+  }
+  .avatar-upload__image { border-radius: 0; }
+}
+
+.directory-form .df-repeater-up,
+.directory-form .df-repeater-down {
+  flex: 0 0 auto;
+  width: 2.25rem;
+  border: 1px solid #d0d5dd;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  &:disabled { opacity: 0.35; cursor: default; }
+}
+
+.directory-form .is-invalid {
+  border-color: #b42318 !important;
+}
+
+.directory-form .df-suggest {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: 50;
+  margin: 2px 0 0;
+  padding: 0;
+  list-style: none;
+  background: #fff;
+  border: 1px solid #d0d5dd;
+  border-radius: 6px;
+  box-shadow: 0 6px 16px rgba(16, 24, 40, 0.12);
+  max-height: 260px;
+  overflow-y: auto;
+  li {
+    padding: 0.55rem 0.8rem;
+    cursor: pointer;
+    &:hover, &.is-active { background: #f2f4f7; }
+  }
+}
+
+.directory-form .df-location-wrap {
+  position: relative;
+}
+
+.directory-form-status a {
+  font-weight: 600;
+  text-decoration: underline;
+  color: inherit;
+}

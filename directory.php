@@ -1,0 +1,14 @@
+<?php
+defined( 'ABSPATH' ) || exit;
+
+define( 'TCK_API_KEY_GOOGLE_MAPS', 'AIzaSyBGlpPviBW9MQHHAvV0WnBRHMwy3H3BwhI' ); //todo from acf
+
+define( 'TCK_DIRECTORY_PATH', get_stylesheet_directory() . '/directory/' );
+define( 'TCK_DIRECTORY_URL', get_stylesheet_directory_uri() . '/directory/' );
+
+require_once TCK_DIRECTORY_PATH . 'inc/post-type.php';
+require_once TCK_DIRECTORY_PATH . 'inc/meta.php';
+require_once TCK_DIRECTORY_PATH . 'inc/shortcode.php';
+require_once TCK_DIRECTORY_PATH . 'inc/single.php';
+require_once TCK_DIRECTORY_PATH . 'inc/seo.php';
+require_once TCK_DIRECTORY_PATH . '_hiden/import-categories.php';
