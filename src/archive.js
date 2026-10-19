@@ -18,6 +18,8 @@ if (root) init(root);
 function init(root) {
   const MAP = root.dataset.mapFacet;
   const PROX = root.dataset.proximityFacet;
+  // TCK_DIRECTORY_MAP_FILTERING (PHP): false = the map never filters the cards.
+  const FILTERING = root.dataset.mapFiltering !== '0';
   // Map filtering button labels from directory_map_button_labels() (inc/facets.php).
   let labels = {};
   try { labels = JSON.parse(root.dataset.mapLabels || '{}'); } catch (e) {}
@@ -65,6 +67,7 @@ function init(root) {
 
   function setFiltering(on) {
     if (typeof window.FWP_MAP === 'undefined') return;
+    on = on && FILTERING;
     FWP_MAP.is_filtering = on;
     if (!on && hasFWP()) FWP.facets[MAP] = [];
     syncFilterButton();
@@ -212,6 +215,11 @@ function init(root) {
 
   document.addEventListener('facetwp-refresh', () => {
     if (!hasFWP()) return;
+    if (!FILTERING) {
+      // Filtering disabled in PHP: never send map bounds.
+      if (typeof window.FWP_MAP !== 'undefined') FWP_MAP.is_filtering = false;
+      FWP.facets[MAP] = [];
+    }
     mapOnlyRefresh = lastOthers !== null && othersState() === lastOthers;
     const prox = JSON.stringify(facetValue(PROX));
     const proxChanged = lastProx !== null && prox !== lastProx;
@@ -237,6 +245,11 @@ function init(root) {
         if (mapMode) refilterAfterLoad = true;
         setFiltering(false);
       });
+      // Map bounds in the URL while filtering is disabled: drop them.
+      if (!FILTERING && facetValue(MAP).length) {
+        FWP.refresh();
+        return;
+      }
       // Shared / reloaded URL that already holds map bounds: open the map view.
       if (facetValue(MAP).length) {
         openMap();

@@ -21,7 +21,8 @@ $facets = directory_facet_names();
 $term   = is_tax() ? get_queried_object() : null;
 $title  = $term ? $term->name : 'Provider Directory';
 ?>
-<main id="main" class="site-main directory-archive"
+<main id="main" class="site-main directory-archive <?php echo directory_map_filtering_enabled() ? 'has-map-filtering' : 'no-map-filtering'; ?>"
+      data-map-filtering="<?php echo directory_map_filtering_enabled() ? '1' : '0'; ?>"
       data-map-facet="<?php echo esc_attr( $facets['map'] ); ?>"
       data-proximity-facet="<?php echo esc_attr( $facets['proximity'] ); ?>"
       data-map-labels="<?php echo esc_attr( wp_json_encode( directory_map_button_labels() ) ); ?>">

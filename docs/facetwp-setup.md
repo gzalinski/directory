@@ -79,6 +79,7 @@ Modelled on https://facetwp.com/demo/state-parks/.
 | New location in split view | Filtering pauses for that request so the map can zoom to the location, then turns back on. |
 | **Search this area** with a location entered | The map area replaces the location: the Proximity location is cleared for that search (both together would AND to "no results"). |
 | URL with map bounds (shared link) | Page opens in split view; if it also holds a location, the location is dropped. |
+| `TCK_DIRECTORY_MAP_FILTERING = false` (directory.php) | Split view still works, but the map never filters the cards and its "Search this area" button is hidden. Default `true`. Also: `directory_map_filtering` filter. |
 | Below 992px | No room for two columns: the map shows above the cards. |
 
 Layout knobs (CSS custom properties on `.directory-archive`):

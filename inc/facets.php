@@ -156,6 +156,17 @@ add_filter( 'facetwp_facets', function ( $facets ) {
 } );
 
 /**
+ * Is map filtering on? Set with TCK_DIRECTORY_MAP_FILTERING (directory.php)
+ * or the `directory_map_filtering` filter.
+ *  - true:  in split view the map viewport filters the cards (default).
+ *  - false: the map only shows markers; its filtering button is hidden.
+ */
+function directory_map_filtering_enabled() {
+    $on = defined( 'TCK_DIRECTORY_MAP_FILTERING' ) ? (bool) TCK_DIRECTORY_MAP_FILTERING : true;
+    return (bool) apply_filters( 'directory_map_filtering', $on );
+}
+
+/**
  * Labels for FacetWP's map filtering button. Applied from JS
  * (FWP_JSON.map.filterText / resetText) so they work regardless of the
  * setting key names in the installed FacetWP version.

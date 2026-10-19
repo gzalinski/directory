@@ -230,6 +230,9 @@ $chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' widt
   .facetwp-type-map { position: relative; height: 100%; }
   #facetwp-map { height: 100% !important; width: 100% !important; }
 
+  // TCK_DIRECTORY_MAP_FILTERING = false: no filtering, no button.
+  &.no-map-filtering .facetwp-map-filtering { display: none !important; }
+
   // FacetWP's "Enable map filtering" button, shown as the top-center pill.
   .facetwp-map-filtering {
     position: absolute; top: 0.9rem; left: 50%; transform: translateX(-50%); z-index: 5;
