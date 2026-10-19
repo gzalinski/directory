@@ -75,7 +75,7 @@ $title  = $term ? $term->name : 'Provider Directory';
                 <div class="facetwp-template dir-list">
                     <?php if ( have_posts() ) : ?>
                         <?php while ( have_posts() ) : the_post(); ?>
-                            <?php include TCK_DIRECTORY_PATH . 'templates/parts/directory-card.php'; ?>
+                            <?php directory_template( 'parts/directory-card' ); ?>
                         <?php endwhile; ?>
                     <?php else : ?>
                         <p class="dir-empty">No providers found. Try a wider distance or fewer filters.</p>

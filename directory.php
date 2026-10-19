@@ -6,6 +6,7 @@ define( 'TCK_API_KEY_GOOGLE_MAPS', 'AIzaSyBGlpPviBW9MQHHAvV0WnBRHMwy3H3BwhI' ); 
 define( 'TCK_DIRECTORY_PATH', get_stylesheet_directory() . '/directory/' );
 define( 'TCK_DIRECTORY_URL', get_stylesheet_directory_uri() . '/directory/' );
 
+require_once TCK_DIRECTORY_PATH . 'inc/template.php';
 require_once TCK_DIRECTORY_PATH . 'inc/post-type.php';
 require_once TCK_DIRECTORY_PATH . 'inc/meta.php';
 require_once TCK_DIRECTORY_PATH . 'inc/shortcode.php';

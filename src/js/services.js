@@ -1,11 +1,9 @@
 import { $ } from './form.js';
 
 // Services list repeater: add / remove / move up / move down.
-const ROW_HTML =
-  '<input type="text" class="df-repeater-input" placeholder="e.g. Free consultation">' +
-  '<button type="button" class="df-repeater-up" title="Move up" aria-label="Move up">&uarr;</button>' +
-  '<button type="button" class="df-repeater-down" title="Move down" aria-label="Move down">&darr;</button>' +
-  '<button type="button" class="df-repeater-remove" title="Remove" aria-label="Remove">&times;</button>';
+// New rows are cloned from <template id="services-row-template">
+// (templates/form/repeater-row.php), so the markup lives in PHP only.
+const rowTemplate = () => document.getElementById('services-row-template');
 
 export function initServices() {
   const repeater = $('#services-repeater');
@@ -19,16 +17,14 @@ export function initServices() {
   }
 
   function addRow(value = '') {
-    const row = document.createElement('div');
-    row.className = 'df-repeater-row';
-    row.innerHTML = ROW_HTML;
-    row.firstChild.value = value;
+    const row = rowTemplate().content.firstElementChild.cloneNode(true);
+    row.querySelector('.df-repeater-input').value = value;
     repeater.appendChild(row);
     refresh();
     return row;
   }
 
-  $('#services-add-row').addEventListener('click', () => addRow().firstChild.focus());
+  $('#services-add-row').addEventListener('click', () => addRow().querySelector('.df-repeater-input').focus());
 
   repeater.addEventListener('click', (e) => {
     const btn = e.target.closest('button');
