@@ -194,6 +194,10 @@ function directory_save_listing() {
         }
     }
 
+    // FacetWP indexed the post on wp_insert_post, before meta/terms existed.
+    directory_sync_geo_meta( $post_id );
+    directory_facetwp_reindex( $post_id );
+
     wp_send_json_success( array(
         'post_id'   => $post_id,
         'permalink' => get_permalink( $post_id ),

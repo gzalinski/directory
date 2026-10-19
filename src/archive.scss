@@ -1,0 +1,289 @@
+// Directory archive: search bar, filter pills, list cards, map view.
+// Palette shared with single.scss.
+$navy: #1e3a5f;
+$navy-dark: #16304f;
+$text: #1f2a44;
+$muted: #667085;
+$bg: #f3f8ff;
+$border: #e4ecf7;
+$line: #d0d5dd;
+$blue: #4a7ab8;
+
+$chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%231f2a44' stroke-width='1.3'/%3E%3C/svg%3E");
+
+@mixin pill {
+  height: 34px;
+  padding: 0 2rem 0 0.8rem;
+  font-size: 0.8rem;
+  color: $text;
+  background: #fff $chevron no-repeat right 0.75rem center;
+  border: 1px solid $navy;
+  border-radius: 2px;
+  appearance: none;
+  cursor: pointer;
+}
+
+.directory-archive {
+  --dir-map-h: clamp(460px, 78vh, 780px);
+  color: $text;
+  padding: 2rem 0 4rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+
+  .dir-container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+  h1, h2, h3 { margin: 0; }
+  .screen-reader-text {
+    position: absolute !important; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px); white-space: nowrap;
+  }
+
+  .dir-archive__title { font-size: 1.4rem; font-weight: 600; margin-bottom: 1rem; }
+  .dir-admin-note { padding: 0.6rem 0.8rem; background: #fef3f2; color: #b42318; border-radius: 6px; }
+
+  .dir-dot {
+    display: inline-block; width: 4px; height: 4px; margin: 0 0.4rem 2px;
+    background: #b8c4d6; border-radius: 50%; vertical-align: middle;
+  }
+  .dir-pill {
+    display: inline-block; padding: 0.05rem 0.55rem; font-size: 0.75rem;
+    background: $bg; border: 1px solid $border; border-radius: 4px; white-space: nowrap;
+  }
+  .dir-avatar-empty {
+    display: flex; align-items: center; justify-content: center;
+    width: 100%; height: 100%; background: #dbe6f5; color: $blue;
+  }
+
+  .dir-btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+    min-height: 34px; padding: 0.45rem 1rem;
+    background: $navy; color: #fff; border: 1px solid $navy; border-radius: 2px;
+    font-size: 0.8rem; font-weight: 500; text-decoration: none; cursor: pointer; white-space: nowrap;
+    &:hover { background: $navy-dark; color: #fff; }
+    &--outline { background: #fff; color: $text; border-color: $text; &:hover { background: $bg; color: $text; } }
+    &--block { display: flex; width: 100%; }
+    &.is-disabled { opacity: 0.45; pointer-events: none; }
+  }
+
+  // FacetWP adds bottom margins to every facet; we lay them out ourselves.
+  .facetwp-facet { margin: 0 !important; }
+
+  // ---- Search bar -------------------------------------------------------
+  .dir-search { background: $bg; padding: 1.5rem; margin-bottom: 1.5rem; }
+  .dir-search__bar { display: grid; grid-template-columns: 1fr 1fr auto; gap: 1rem; }
+  .dir-search__field {
+    position: relative; display: flex; align-items: center;
+    height: 44px; background: #fff; border: 1px solid $border;
+    > i { position: absolute; left: 0.85rem; color: #98a2b3; font-size: 0.85rem; pointer-events: none; z-index: 1; }
+    .facetwp-facet, .facetwp-input-wrap { width: 100%; height: 100%; }
+    input.facetwp-search, input.facetwp-location {
+      width: 100% !important; height: 100%; padding: 0 2.5rem 0 2.3rem;
+      border: 0; background: transparent; font-size: 0.85rem; color: $text; outline: none;
+      &::placeholder { color: #98a2b3; }
+    }
+    &:focus-within { border-color: $blue; }
+  }
+  .dir-search__field--text .facetwp-icon { display: none; } // our Search button submits
+  .dir-search__field--location {
+    .facetwp-input-wrap { position: relative; }
+    .locate-me { position: absolute; right: 0.6rem; top: 50%; transform: translateY(-50%); }
+    // Radius is shown as the "Distance" pill below; FacetWP still reads it from here.
+    .facetwp-radius-wrap, select.facetwp-radius {
+      position: absolute !important; width: 1px; height: 1px; opacity: 0; pointer-events: none;
+    }
+    .location-results { z-index: 30; }
+  }
+  .dir-search__submit { height: 44px; min-width: 110px; font-size: 0.9rem; }
+
+  // ---- Filter pills -----------------------------------------------------
+  .dir-search__filters {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 0.9rem; margin-top: 1rem;
+  }
+  .dir-filter {
+    select, .facetwp-dropdown { @include pill; max-width: 240px; }
+    // fSelect (multi-select) styled as a pill.
+    .fs-wrap { width: auto; min-width: 140px; }
+    .fs-label-wrap { @include pill; display: flex; align-items: center; background-image: none; }
+    .fs-label { padding: 0; font-size: 0.8rem; }
+    .fs-arrow { right: 0.75rem; }
+    .fs-dropdown { width: 280px; z-index: 40; border-color: $line; }
+  }
+  .dir-reset {
+    background: none; border: 0; padding: 0; color: $navy;
+    font-size: 0.8rem; text-decoration: underline; cursor: pointer;
+  }
+
+  // ---- Toolbar ----------------------------------------------------------
+  .dir-toolbar {
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    padding-bottom: 1.25rem; margin-bottom: 1.5rem; border-bottom: 1px solid $line;
+  }
+  .dir-toolbar__sort {
+    display: flex; align-items: center; gap: 0.35rem; font-size: 0.8rem;
+    select {
+      border: 0; background: transparent $chevron no-repeat right center;
+      padding: 0 1rem 0 0; font-weight: 600; font-size: 0.8rem; color: $text;
+      appearance: none; cursor: pointer;
+    }
+  }
+  .dir-map-preview {
+    position: relative; display: flex; align-items: center; justify-content: center;
+    width: 195px; height: 64px; padding: 0; cursor: pointer; overflow: hidden;
+    border: 1px solid $border;
+    // Decorative street pattern; no Static Maps API call needed.
+    background:
+      linear-gradient(28deg, transparent 47%, #f2d9ac 48%, #f2d9ac 52%, transparent 53%),
+      linear-gradient(-62deg, transparent 46%, #fff 47%, #fff 53%, transparent 54%),
+      repeating-linear-gradient(0deg, transparent 0 15px, #fff 15px 17px),
+      repeating-linear-gradient(90deg, transparent 0 22px, #fff 22px 24px),
+      #e9e7e1;
+    &:hover .dir-map-preview__btn { background: $navy-dark; }
+  }
+  .dir-map-preview__btn {
+    display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.45rem 0.9rem;
+    background: $navy; color: #fff; font-size: 0.75rem; font-weight: 500;
+  }
+
+  // ---- Stage: list + map share one box ------------------------------------
+  .dir-stage { position: relative; }
+
+  .dir-results { background: $bg; padding: 0.75rem; }
+  .dir-list { display: flex; flex-direction: column; gap: 0.75rem; }
+  .dir-empty { margin: 0; padding: 2.5rem 1rem; text-align: center; color: $muted; background: #fff; }
+
+  .dir-card-row {
+    display: grid;
+    grid-template-columns: 56px minmax(0, 1fr) minmax(0, 1.15fr) auto;
+    gap: 1.25rem 1.1rem; align-items: center;
+    padding: 1.4rem 1rem 1.4rem 1.1rem; background: #fff;
+  }
+  .dir-card-row__avatar {
+    display: block; width: 56px; height: 56px; border-radius: 50%; overflow: hidden;
+    img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  }
+  .dir-card-row__title {
+    display: flex; align-items: center; flex-wrap: wrap; gap: 0.15rem;
+    h2 { font-size: 0.95rem; font-weight: 500; }
+    h2 a { color: inherit; text-decoration: none; &:hover { text-decoration: underline; } }
+  }
+  .dir-rating {
+    margin-top: 0.3rem; font-size: 0.75rem; color: $muted;
+    i { color: #f5b301; }
+  }
+  .dir-rating__count { color: $blue; font-weight: 600; }
+  .dir-loc {
+    margin-top: 0.3rem; font-size: 0.75rem; color: $text;
+    > i { color: #98a2b3; margin-right: 0.3rem; }
+    strong { font-weight: 600; }
+  }
+  .dir-card-row__about {
+    h3 { font-size: 0.85rem; font-weight: 700; margin-bottom: 0.25rem; }
+    p {
+      margin: 0; font-size: 0.8rem; color: #344054;
+      display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+    }
+  }
+  .dir-card-row__actions {
+    display: flex; flex-direction: column; gap: 0.5rem;
+    .dir-btn { min-width: 128px; }
+  }
+
+  // ---- Pager (FacetWP "Page numbers") ----------------------------------------
+  .dir-pager { padding-top: 1.75rem; }
+  .facetwp-pager { display: flex; justify-content: center; align-items: center; gap: 0.35rem; }
+  .facetwp-page {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-width: 22px; height: 22px; padding: 0 0.3rem; margin: 0 !important;
+    font-size: 0.7rem; color: $text; background: #fff; border: 1px solid $border;
+    border-radius: 2px; text-decoration: none; cursor: pointer;
+    &:hover { border-color: $blue; }
+    &.active { background: $blue; border-color: $blue; color: #fff; font-weight: 600; }
+    &.dots { border-color: transparent; cursor: default; }
+    &.prev { background: #8a96a8; border-color: #8a96a8; color: #fff; }
+    &.next { background: $navy; border-color: $navy; color: #fff; }
+  }
+
+  // ---- Map view -----------------------------------------------------------
+  // In list view the map stays rendered (FacetWP needs it on the page) at its
+  // real size, just invisible, so it is already fitted when opened.
+  .dir-mapview {
+    position: absolute; top: 0; left: 0; right: 0;
+    height: var(--dir-map-h);
+    visibility: hidden; pointer-events: none;
+    background: #e9e7e1;
+  }
+  .facetwp-type-map { position: relative; height: 100%; }
+  #facetwp-map { height: 100% !important; width: 100% !important; }
+
+  // FacetWP's "Enable map filtering" button, shown as the top-center pill.
+  .facetwp-map-filtering {
+    position: absolute; top: 0.9rem; left: 50%; transform: translateX(-50%); z-index: 5;
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.5rem 1rem; margin: 0;
+    background: #fff; color: $text; border: 1px solid $navy; border-radius: 2px;
+    font-size: 0.8rem; font-weight: 500; cursor: pointer; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    &::before { content: "\f05b"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+    &:hover, &.enabled { background: $bg; }
+  }
+
+  .dir-map-close {
+    position: absolute; top: 0.9rem; right: 0.9rem; z-index: 6;
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    padding: 0.5rem 0.9rem; background: $navy; color: #fff; border: 0; border-radius: 2px;
+    font-size: 0.8rem; font-weight: 500; cursor: pointer; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    &:hover { background: $navy-dark; }
+  }
+  .dir-map-count {
+    position: absolute; left: 0.9rem; bottom: 1.6rem; z-index: 5;
+    padding: 0.35rem 0.75rem; background: #fff; border-radius: 2px;
+    font-size: 0.75rem; font-weight: 600; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    &:empty { display: none; }
+  }
+
+  &:not(.is-map-view) .dir-stage { overflow: clip; overflow-clip-margin: 6px; }
+  &:not(.is-map-view) .dir-map-close,
+  &:not(.is-map-view) .dir-map-count { display: none; }
+
+  &.is-map-view {
+    .dir-results, .dir-toolbar__sort { display: none; }
+    .dir-map-preview { visibility: hidden; }
+    .dir-mapview { position: relative; visibility: visible; pointer-events: auto; }
+  }
+
+  // ---- Responsive ---------------------------------------------------------
+  @media (max-width: 991px) {
+    .dir-card-row { grid-template-columns: 56px minmax(0, 1fr) auto; }
+    .dir-card-row__about { grid-column: 1 / -1; grid-row: 2; }
+  }
+  @media (max-width: 767px) {
+    --dir-map-h: 72vh;
+    .dir-search { padding: 1rem; }
+    .dir-search__bar { grid-template-columns: 1fr; gap: 0.6rem; }
+    .dir-search__filters { gap: 0.5rem; }
+    .dir-toolbar { flex-wrap: wrap; }
+    .dir-map-preview { width: 150px; height: 52px; }
+    .dir-card-row { grid-template-columns: 48px minmax(0, 1fr); padding: 1rem; }
+    .dir-card-row__avatar { width: 48px; height: 48px; }
+    .dir-card-row__actions { grid-column: 1 / -1; flex-direction: row; .dir-btn { flex: 1; min-width: 0; } }
+    &.is-map-view .dir-map-preview { display: none; }
+    .facetwp-map-filtering { top: 3.6rem; }
+  }
+}
+
+// ---- Map info window (rendered by Google inside .gm-style) ----------------
+.directory-archive .gm-style .gm-style-iw-c {
+  padding: 0.9rem !important; border-radius: 4px; max-width: 360px !important;
+}
+.directory-archive .gm-style .gm-style-iw-d { overflow: visible !important; }
+.directory-archive .gm-style .gm-style-iw-chr { position: absolute; top: 0; right: 0; }
+
+.dir-iw {
+  color: $text; font-size: 0.8rem; line-height: 1.45; padding-right: 1.25rem;
+  .dir-iw__head { display: flex; gap: 0.75rem; align-items: center; margin-bottom: 0.75rem; }
+  .dir-iw__avatar {
+    flex: none; width: 48px; height: 48px; border-radius: 50%; overflow: hidden; background: #dbe6f5;
+    img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  }
+  .dir-iw__title { display: flex; align-items: center; flex-wrap: wrap; strong { font-weight: 500; font-size: 0.9rem; } }
+  .dir-rating, .dir-loc { margin-top: 0.2rem; }
+  .dir-btn { min-height: 32px; }
+}
