@@ -36,6 +36,8 @@ function init(root) {
   let mapMode = false;
   let booted = false;
   let lastProx = null; // last Proximity value, to detect a new location search
+  let lastOthers = null; // every facet except the map + page, to spot map-only refreshes
+  let mapOnlyRefresh = false; // refresh caused only by moving the map
   let refilterAfterLoad = false; // re-enable map filtering after FacetWP fits the new bounds
 
   const hasFWP = () => typeof window.FWP !== 'undefined';
@@ -200,8 +202,16 @@ function init(root) {
   //  - a new location was entered  -> it wins, the viewport is dropped;
   //  - the map area was searched   -> the viewport wins, the location is dropped.
   // Fires after FacetWP has parsed facet values, before the AJAX request.
+  // Facet state without the map viewport (+ current page): unchanged = map move.
+  function othersState() {
+    const facets = Object.assign({}, FWP.facets);
+    delete facets[MAP];
+    return JSON.stringify([facets, FWP.paged || 1]);
+  }
+
   document.addEventListener('facetwp-refresh', () => {
     if (!hasFWP()) return;
+    mapOnlyRefresh = lastOthers !== null && othersState() === lastOthers;
     const prox = JSON.stringify(facetValue(PROX));
     const proxChanged = lastProx !== null && prox !== lastProx;
     const filtering = typeof window.FWP_MAP !== 'undefined' && FWP_MAP.is_filtering;
@@ -246,8 +256,13 @@ function init(root) {
       refilterWhenIdle();
     }
 
-    // New results while scrolled down the cards: back to the first card.
-    if (mapMode && el.results.getBoundingClientRect().top < offsetTop()) scrollToNode(el.toolbar);
+    // New filters / page while scrolled down the cards: back to the first card.
+    // Not when only the map was moved: the visitor is using the map there.
+    if (mapMode && !mapOnlyRefresh && el.results.getBoundingClientRect().top < offsetTop()) {
+      scrollToNode(el.toolbar);
+    }
+    mapOnlyRefresh = false;
+    lastOthers = othersState();
     syncFilterButton();
     syncDistance();
     syncReset();
