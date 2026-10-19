@@ -28,7 +28,10 @@ $chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' widt
 }
 
 .directory-archive {
-  --dir-map-h: clamp(460px, 78vh, 780px);
+  --dir-split-gap: 2rem;            // space between cards and map
+  --dir-map-share: 0.53;            // map column width in split view
+  --dir-sticky-top: 1rem;           // add your sticky header height here
+  --dir-map-h: max(460px, calc(100vh - 2 * var(--dir-sticky-top)));
   color: $text;
   padding: 2rem 0 4rem;
   font-size: 0.95rem;
@@ -143,11 +146,9 @@ $chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' widt
     &:hover .dir-map-preview__btn { background: $navy-dark; }
   }
   .dir-map-preview__btn {
-    display: inline-flex; align-items: center; padding: 0.45rem 0.9rem;
+    display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.45rem 0.9rem;
     background: $navy; color: #fff; font-size: 0.75rem; font-weight: 500;
   }
-  .dir-map-preview__open, .dir-map-preview__close { display: inline-flex; align-items: center; gap: 0.45rem; }
-  .dir-map-preview__close { display: none; }
 
   // ---- Stage: list + map share one box ------------------------------------
   .dir-stage { position: relative; }
@@ -208,11 +209,13 @@ $chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' widt
     &.next { background: $navy; border-color: $navy; color: #fff; }
   }
 
-  // ---- Map view -----------------------------------------------------------
-  // In list view the map stays rendered (FacetWP needs it on the page) at its
-  // real size, just invisible, so it is already fitted when opened.
+  // ---- Map / split view ------------------------------------------------------
+  // List view: the map is rendered but invisible, in exactly the box it will
+  // take in split view (right column, same height), so it is already fitted
+  // to the markers when opened. FacetWP needs the Map facet on the page anyway.
   .dir-mapview {
-    position: absolute; top: 0; left: 0; right: 0;
+    position: absolute; top: 0; right: 0;
+    width: calc((100% - var(--dir-split-gap)) * var(--dir-map-share));
     height: var(--dir-map-h);
     visibility: hidden; pointer-events: none;
     background: #e9e7e1;
@@ -224,38 +227,64 @@ $chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' widt
   .facetwp-map-filtering {
     position: absolute; top: 0.9rem; left: 50%; transform: translateX(-50%); z-index: 5;
     display: inline-flex; align-items: center; gap: 0.5rem;
-    padding: 0.5rem 1rem; margin: 0;
+    padding: 0.5rem 1rem; margin: 0; white-space: nowrap;
     background: #fff; color: $text; border: 1px solid $navy; border-radius: 2px;
     font-size: 0.8rem; font-weight: 500; cursor: pointer; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
     &::before { content: "\f05b"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
     &:hover, &.enabled { background: $bg; }
   }
 
-  .dir-map-count {
-    position: absolute; left: 0.9rem; bottom: 1.6rem; z-index: 5;
-    padding: 0.35rem 0.75rem; background: #fff; border-radius: 2px;
-    font-size: 0.75rem; font-weight: 600; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
-    &:empty { display: none; }
+  .dir-map-close {
+    position: absolute; top: 0.9rem; right: 0.9rem; z-index: 6;
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    padding: 0.5rem 0.9rem; background: $navy; color: #fff; border: 0; border-radius: 2px;
+    font-size: 0.8rem; font-weight: 500; cursor: pointer; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    &:hover { background: $navy-dark; }
   }
 
   &:not(.is-map-view) .dir-stage { overflow: clip; overflow-clip-margin: 6px; }
-  &:not(.is-map-view) .dir-map-count { display: none; }
 
+  // Split view: cards left, sticky map right (like the FacetWP State Parks demo).
   &.is-map-view {
-    .dir-results, .dir-toolbar__sort { display: none; }
-    // Same toggle button, now reading "Close Map".
-    .dir-map-preview__open { display: none; }
-    .dir-map-preview__close { display: inline-flex; }
-    .dir-mapview { position: relative; visibility: visible; pointer-events: auto; }
+    .dir-map-preview { visibility: hidden; } // "Close Map" lives on the map
+    .dir-stage {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) calc((100% - var(--dir-split-gap)) * var(--dir-map-share));
+      gap: var(--dir-split-gap);
+      align-items: start;
+    }
+    .dir-mapview {
+      position: sticky; top: var(--dir-sticky-top); grid-column: 2; grid-row: 1;
+      width: auto; visibility: visible; pointer-events: auto;
+    }
+    .dir-results { grid-column: 1; grid-row: 1; }
+
+    // Cards stack vertically in the narrow column (design: split view).
+    .dir-card-row {
+      grid-template-columns: 56px minmax(0, 1fr);
+      gap: 1rem; padding: 1.4rem 1.25rem; align-items: start;
+    }
+    .dir-card-row__about { grid-column: 1 / -1; }
+    .dir-card-row__about p { -webkit-line-clamp: 4; }
+    .dir-card-row__actions {
+      grid-column: 1 / -1; flex-direction: row;
+      .dir-btn { flex: 1; min-width: 0; min-height: 38px; }
+    }
   }
 
   // ---- Responsive ---------------------------------------------------------
   @media (max-width: 991px) {
     .dir-card-row { grid-template-columns: 56px minmax(0, 1fr) auto; }
     .dir-card-row__about { grid-column: 1 / -1; grid-row: 2; }
+
+    // No room for two columns: the map sits above the cards instead.
+    .dir-mapview { width: 100%; height: 60vh; }
+    &.is-map-view {
+      .dir-stage { display: flex; flex-direction: column; gap: 1rem; }
+      .dir-mapview { position: relative; top: auto; width: 100%; height: 60vh; }
+    }
   }
   @media (max-width: 767px) {
-    --dir-map-h: 72vh;
     .dir-search { padding: 1rem; }
     .dir-search__bar { grid-template-columns: 1fr; gap: 0.6rem; }
     .dir-search__filters { gap: 0.5rem; }
@@ -264,6 +293,7 @@ $chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' widt
     .dir-card-row { grid-template-columns: 48px minmax(0, 1fr); padding: 1rem; }
     .dir-card-row__avatar { width: 48px; height: 48px; }
     .dir-card-row__actions { grid-column: 1 / -1; flex-direction: row; .dir-btn { flex: 1; min-width: 0; } }
+    .facetwp-map-filtering { top: 3.6rem; }
   }
 }
 

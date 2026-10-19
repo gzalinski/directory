@@ -67,17 +67,26 @@ Notes:
 - Map styling: FacetWP's map no longer accepts JSON styles. Create a Map ID with
   a style in Google Cloud Console and set it in the `directory_map` facet.
 
-## List / map behaviour (`src/archive.js`)
+## List / split-map behaviour (`src/archive.js`)
+
+Modelled on https://facetwp.com/demo/state-parks/.
 
 | Action | Result |
 |---|---|
-| **View Map** | Cards, pager and sort are hidden; the full Map facet is shown; map filtering is turned **on** (the viewport filters results, count shown bottom-left). |
-| **Close Map** (top right) or Esc | Back to cards + pager; map filtering turned **off**; the listing refreshes if the viewport had filtered it. |
-| New location in map view | Filtering is paused for that request so the map can zoom to the new location, then turned back on. |
-| URL with map bounds (shared link) | Page opens directly in map view. |
+| Default | Full-width cards + pager; small map preview with **View Map**. |
+| **View Map** | Split view: cards + pager on the left, sticky map on the right. Map filtering turns **on**: panning / zooming filters the cards. |
+| **Close Map** (top-right of the map) or Esc | Back to full-width cards; map filtering turns **off** and the listing refreshes if the viewport had filtered it. |
+| New location in split view | Filtering pauses for that request so the map can zoom to the location, then turns back on. |
+| URL with map bounds (shared link) | Page opens in split view. |
+| Below 992px | No room for two columns: the map shows above the cards. |
 
-The Map facet stays rendered (invisible, full size) in list view, because FacetWP
-requires it on the page and so the map is already fitted when opened.
+Layout knobs (CSS custom properties on `.directory-archive`):
+`--dir-map-share` (map column width, default 0.53), `--dir-split-gap`,
+`--dir-sticky-top` (add your sticky header height so the map sits below it).
+
+The map stays rendered (invisible) in list view, in the same box it uses in
+split view, so it is already fitted to the markers when opened. The sticky map
+needs no `overflow: hidden` on the theme's wrappers around the page content.
 
 ## Build
 

@@ -1,10 +1,10 @@
 // Directory archive: list view <-> map view on top of FacetWP.
 //
-// One toggle button in the toolbar (the map preview):
-// - "View Map" hides cards + pager, shows the Map facet full width and turns
-//   map filtering ON (the map viewport becomes a filter).
-// - "Close Map" (same button, or Esc) returns to cards + pager and turns map
-//   filtering OFF, refreshing the listing if a viewport filter had been applied.
+// Split view like https://facetwp.com/demo/state-parks/:
+// - "View Map" (toolbar) shows cards on the left and a sticky map on the right
+//   and turns map filtering ON: panning / zooming filters the cards.
+// - "Close Map" (top-right of the map, or Esc) returns to full-width cards and
+//   turns map filtering OFF, refreshing the listing if the viewport filtered it.
 //
 // FacetWP JS API used (https://facetwp.com/help-center/developers/javascript-reference/):
 //   FWP.facets, FWP.refresh(), FWP.reset(), FWP.hooks, FWP.settings.pager,
@@ -22,9 +22,9 @@ function init(root) {
   try { labels = JSON.parse(root.dataset.mapLabels || '{}'); } catch (e) {}
 
   const el = {
-    toggle: root.querySelector('[data-dir-toggle-map]'), // "View Map" / "Close Map"
+    open: root.querySelector('[data-dir-open-map]'),
+    close: root.querySelector('[data-dir-close-map]'),
     mapview: root.querySelector('.dir-mapview'),
-    count: root.querySelector('[data-dir-map-count]'),
     search: root.querySelector('[data-dir-search]'),
     reset: root.querySelector('[data-dir-reset]'),
     distWrap: root.querySelector('[data-dir-distance-wrap]'),
@@ -88,10 +88,10 @@ function init(root) {
     mapMode = true;
     root.classList.add('is-map-view');
     el.mapview.setAttribute('aria-hidden', 'false');
-    el.toggle.setAttribute('aria-expanded', 'true');
+    el.open.setAttribute('aria-expanded', 'true');
     whenMap(() => setFiltering(true));
-    updateCount();
-    root.querySelector('.dir-toolbar').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    root.querySelector('.dir-stage').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    el.close.focus({ preventScroll: true });
   }
 
   function closeMap() {
@@ -100,7 +100,7 @@ function init(root) {
     refilterAfterLoad = false;
     root.classList.remove('is-map-view');
     el.mapview.setAttribute('aria-hidden', 'true');
-    el.toggle.setAttribute('aria-expanded', 'false');
+    el.open.setAttribute('aria-expanded', 'false');
     setActiveMarker(null);
 
     // Only refresh when the viewport actually filtered the results.
@@ -108,15 +108,7 @@ function init(root) {
     setFiltering(false);
     if (hadBounds && hasFWP()) FWP.refresh();
 
-    root.querySelector('.dir-toolbar').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }
-
-  function updateCount() {
-    if (!el.count || !hasFWP() || !FWP.settings || !FWP.settings.pager) return;
-    const n = parseInt(FWP.settings.pager.total_rows, 10) || 0;
-    const noun = n === 1 ? 'provider' : 'providers';
-    const where = typeof window.FWP_MAP !== 'undefined' && FWP_MAP.is_filtering ? ' in this area' : '';
-    el.count.textContent = n.toLocaleString('en-US') + ' ' + noun + where;
+    el.open.focus({ preventScroll: true });
   }
 
   /* ---- Distance pill (mirrors the Proximity radius dropdown) --------- */
@@ -216,7 +208,6 @@ function init(root) {
     syncFilterButton();
     syncDistance();
     syncReset();
-    updateCount();
   });
 
   document.addEventListener('facetwp-maps-loaded', () => {
@@ -232,7 +223,8 @@ function init(root) {
 
   /* ---- UI ------------------------------------------------------------ */
 
-  el.toggle.addEventListener('click', () => (mapMode ? closeMap() : openMap()));
+  el.open.addEventListener('click', openMap);
+  el.close.addEventListener('click', closeMap);
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && mapMode && !e.target.closest('input, select, textarea')) closeMap();
   });
@@ -240,5 +232,5 @@ function init(root) {
   if (el.reset) el.reset.addEventListener('click', () => hasFWP() && FWP.reset());
 
   // Without FacetWP the listing still works; the map button has nothing to show.
-  if (!document.querySelector('.facetwp-type-map, .facetwp-facet-' + MAP)) el.toggle.hidden = true;
+  if (!document.querySelector('.facetwp-type-map, .facetwp-facet-' + MAP)) el.open.hidden = true;
 }
