@@ -13,7 +13,52 @@
 //   events: facetwp-refresh, facetwp-loaded, facetwp-maps-loaded.
 
 const root = document.querySelector('.directory-archive');
-if (root) init(root);
+if (root) {
+  initClusterColors();
+  init(root);
+}
+
+// Cluster icons: same look and size rule as the default MarkerClusterer
+// renderer (blue = small, red = large), in brand colors.
+// https://facetwp.com/help-center/facets/facet-types/map/advanced-map-customizations/customize-marker-clustering/
+function initClusterColors() {
+  const SMALL = '#243b55'; // instead of default blue
+  const LARGE = '#b98f5c'; // instead of default red
+  let done = false;
+
+  const renderer = {
+    render({ count, position }, stats) {
+      const color = count > Math.max(10, stats.clusters.markers.mean) ? LARGE : SMALL;
+      const svg =
+        '<svg fill="' + color + '" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="50" height="50">' +
+        '<circle cx="120" cy="120" opacity=".6" r="70"/>' +
+        '<circle cx="120" cy="120" opacity=".3" r="90"/>' +
+        '<circle cx="120" cy="120" opacity=".2" r="110"/>' +
+        '<text x="50%" y="50%" style="fill:#fff" text-anchor="middle" font-size="50" ' +
+        'dominant-baseline="middle" font-family="roboto,arial,sans-serif">' + count + '</text></svg>';
+      const content = new DOMParser().parseFromString(svg, 'image/svg+xml').documentElement;
+      return new google.maps.marker.AdvancedMarkerElement({
+        position,
+        content,
+        title: count + ' providers',
+        zIndex: 1000000 + count, // clusters above single markers
+      });
+    },
+  };
+
+  // Must be registered before the map builds its clusterer (first refresh).
+  const register = () => {
+    if (done || typeof window.FWP === 'undefined' || !FWP.hooks) return;
+    done = true;
+    FWP.hooks.addFilter('facetwp_map/clusterer', (clusterargs) => {
+      clusterargs.renderer = renderer;
+      return clusterargs;
+    });
+  };
+  register();
+  document.addEventListener('DOMContentLoaded', register);
+  document.addEventListener('facetwp-refresh', register);
+}
 
 function init(root) {
   const MAP = root.dataset.mapFacet;
