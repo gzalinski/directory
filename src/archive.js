@@ -17,6 +17,9 @@ function init(root) {
   const MAP = root.dataset.mapFacet;
   const PROX = root.dataset.proximityFacet;
   const POS_KEY = 'directoryVisitorPos'; // shared with single.js
+  // Map filtering button labels from directory_map_button_labels() (inc/facets.php).
+  let labels = {};
+  try { labels = JSON.parse(root.dataset.mapLabels || '{}'); } catch (e) {}
 
   const el = {
     open: root.querySelector('[data-dir-open-map]'),
@@ -52,8 +55,8 @@ function init(root) {
     if (!btn || typeof window.FWP_MAP === 'undefined') return;
     const on = !!FWP_MAP.is_filtering;
     btn.classList.toggle('enabled', on);
-    const labels = window.FWP_JSON && FWP_JSON.map;
-    const text = labels && (on ? labels.resetText : labels.filterText);
+    const fwp = (window.FWP_JSON && FWP_JSON.map) || {};
+    const text = on ? labels.reset || fwp.resetText : labels.filter || fwp.filterText;
     if (text) btn.textContent = text;
   }
 
@@ -237,7 +240,14 @@ function init(root) {
     visitorDistances();
   });
 
-  document.addEventListener('facetwp-maps-loaded', syncFilterButton);
+  document.addEventListener('facetwp-maps-loaded', () => {
+    // FacetWP's own button click handler reads these, so set them once.
+    if (window.FWP_JSON && FWP_JSON.map) {
+      if (labels.filter) FWP_JSON.map.filterText = labels.filter;
+      if (labels.reset) FWP_JSON.map.resetText = labels.reset;
+    }
+    syncFilterButton();
+  });
 
   /* ---- UI ------------------------------------------------------------ */
 

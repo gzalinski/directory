@@ -12,6 +12,7 @@ require_once TCK_DIRECTORY_PATH . 'inc/meta.php';
 require_once TCK_DIRECTORY_PATH . 'inc/shortcode.php';
 require_once TCK_DIRECTORY_PATH . 'inc/single.php';
 require_once TCK_DIRECTORY_PATH . 'inc/archive.php';
+require_once TCK_DIRECTORY_PATH . 'inc/facets.php';
 require_once TCK_DIRECTORY_PATH . 'inc/seo.php';
 require_once TCK_DIRECTORY_PATH . '_hiden/import-categories.php';
 require_once TCK_DIRECTORY_PATH . '_hiden/import-demo.php';

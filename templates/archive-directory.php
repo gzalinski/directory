@@ -22,7 +22,8 @@ $title  = $term ? $term->name : 'Provider Directory';
 ?>
 <main id="main" class="site-main directory-archive"
       data-map-facet="<?php echo esc_attr( $facets['map'] ); ?>"
-      data-proximity-facet="<?php echo esc_attr( $facets['proximity'] ); ?>">
+      data-proximity-facet="<?php echo esc_attr( $facets['proximity'] ); ?>"
+      data-map-labels="<?php echo esc_attr( wp_json_encode( directory_map_button_labels() ) ); ?>">
     <div class="dir-container">
 
         <h1 class="dir-archive__title"><?php echo esc_html( $title ); ?></h1>

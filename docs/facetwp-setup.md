@@ -30,21 +30,27 @@ Existing listings are backfilled once on the next admin page load
 (option `directory_geo_meta_v1`). After saving from the frontend form the
 listing is re-indexed with `FWP()->indexer->index( $post_id )`.
 
-## Facets (Settings > FacetWP > Facets)
+## Facets (registered in code)
 
-Names must match exactly (or change them with the `directory_facet_names` filter).
+All 7 facets are registered in `inc/facets.php` with the `facetwp_facets` hook.
+They appear locked at the bottom of Settings > FacetWP > Facets; nothing to
+create by hand. After pulling the code: **Re-index**.
 
-| Name | Type | Data source | Settings |
+- If you created any of these facets manually before, **delete them** (a saved
+  facet with the same name overrides the code version).
+- Change settings in `directory_facet_definitions()`, or with the
+  `directory_facet_definitions` filter, then Re-index.
+- Map button labels: `directory_map_button_labels()` (applied from JS).
+
+| Name | Type | Data source | Key settings |
 |---|---|---|---|
-| `directory_search` | Search | – | Placeholder "Find your provider"; Auto refresh **off** (the Search button refreshes) |
-| `directory_proximity` | Proximity | `directory_lat`, Longitude: `directory_lng` | Unit: **Miles**; Radius UI: **Dropdown**; Radius options `5, 10, 25, 50, 100, 250`; Default radius `25`; Placeholder "Choose Location" |
-| `directory_category` | Dropdown | `tax/directory_cat` | Label any; "Default label" `Category`; Hierarchical: Yes |
-| `directory_services` | fSelect | `tax/directory_tag` | Multi-select: Yes; "Default label" `Speciality` |
-| `directory_sort` | Sort | – | Default label `Latest`; options: `Name (A–Z)` → Title ASC; `Nearest` (name `nearest`) → `post__in` ASC |
-| `directory_map` | Map | `directory_lat`, Longitude: `directory_lng` | Marker limit: **Show all results**; Marker clustering: On; Width `100%`; Height: leave empty (CSS sets it); Zoom min `3`; Enable filtering button label `Search this area`; Reset button label `Reset map area` |
-| `directory_pager` | Pager | – | Pager type: **Page numbers**; Prev/Next on |
-
-Then **Re-index**.
+| `directory_search` | Search | – | WP default engine, auto refresh off |
+| `directory_proximity` | Proximity | `directory_lat` / `directory_lng` | miles, dropdown radius 5–250, default 25 |
+| `directory_category` | Dropdown | `tax/directory_cat` | hierarchical, "Category" label |
+| `directory_services` | fSelect | `tax/directory_tag` | multi-select, OR |
+| `directory_sort` | Sort | – | Latest (default), Name A–Z, Oldest, Nearest |
+| `directory_map` | Map | `directory_lat` / `directory_lng` | all results, clustering, zoom min 3 |
+| `directory_pager` | Pager | – | page numbers |
 
 Notes:
 - When a location is entered and no sort is chosen, results are ordered nearest
