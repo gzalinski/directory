@@ -197,6 +197,9 @@ $chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' widt
     display: flex; flex-direction: column; gap: 0.5rem;
     .dir-btn { min-width: 128px; }
   }
+  // "Show Location" exists only in split view (needs the map).
+  .dir-card-row__locate { display: none !important; }
+  &.is-map-view .dir-card-row__locate { display: inline-flex !important; }
 
   // ---- Pager (FacetWP "Page numbers") ----------------------------------------
   .dir-pager { padding-top: 1.75rem; }

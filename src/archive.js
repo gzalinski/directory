@@ -116,6 +116,7 @@ function init(root) {
     el.mapview.setAttribute('aria-hidden', 'true');
     el.toggle.setAttribute('aria-expanded', 'false');
     setActiveMarker(null);
+    if (fallbackPopup) fallbackPopup.close();
 
     // Only refresh when the viewport actually filtered the results.
     const hadBounds = facetValue(MAP).length > 0;
@@ -278,6 +279,62 @@ function init(root) {
   });
 
   whenMap(watchMarkers);
+
+  /* ---- "Show Location" on cards (split view) ------------------------ */
+
+  let fallbackPopup = null; // our own info window, only when the marker can't be opened
+
+  const isStacked = () => getComputedStyle(root.querySelector('.dir-stage')).display !== 'grid';
+  const popupOpenFor = (id) => !!el.mapview.querySelector('.gm-style-iw .dir-iw[data-post-id="' + id + '"]');
+
+  function openListingPopup(card, id, position) {
+    if (fallbackPopup) fallbackPopup.close();
+    const marker = el.mapview.querySelector('.dir-marker[data-post-id="' + id + '"]');
+    if (marker) {
+      setActiveMarker(marker);
+      marker.click(); // FacetWP opens its own popup for this marker
+    }
+    // Marker still clustered / not clickable: show the same popup ourselves.
+    setTimeout(() => {
+      if (popupOpenFor(id)) return;
+      const tpl = card.querySelector('.dir-card-row__popup');
+      if (!tpl) return;
+      fallbackPopup = fallbackPopup || new google.maps.InfoWindow({ maxWidth: 480 });
+      fallbackPopup.setContent(tpl.innerHTML);
+      fallbackPopup.setOptions({ pixelOffset: new google.maps.Size(0, -32) });
+      fallbackPopup.setPosition(position);
+      fallbackPopup.open({ map: FWP_MAP.map });
+    }, 350);
+  }
+
+  function showLocation(card) {
+    const id = card.dataset.postId;
+    const [lat, lng] = (card.dataset.latlng || '').split(',').map(parseFloat);
+    if (!id || isNaN(lat) || isNaN(lng)) return;
+
+    whenMap(() => {
+      const map = FWP_MAP.map;
+      const position = { lat, lng };
+      if (isStacked()) scrollToNode(el.mapview); // map is above the cards on small screens
+
+      // Move without re-filtering the cards by the new viewport.
+      const wasFiltering = !!FWP_MAP.is_filtering;
+      FWP_MAP.is_filtering = false;
+      google.maps.event.addListenerOnce(map, 'idle', () => {
+        setTimeout(() => {
+          FWP_MAP.is_filtering = wasFiltering;
+          openListingPopup(card, id, position);
+        }, 150);
+      });
+      map.panTo(position);
+      if ((map.getZoom() || 0) < 15) map.setZoom(15);
+    });
+  }
+
+  root.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-dir-show-location]');
+    if (btn && mapMode) showLocation(btn.closest('.dir-card-row'));
+  });
 
   // Ctrl + mouse wheel over the map zooms the map only: the page must not
   // scroll (or browser-zoom). Listening on window in the bubble phase lets

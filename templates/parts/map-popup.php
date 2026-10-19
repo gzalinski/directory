@@ -7,7 +7,7 @@
  */
 defined( 'ABSPATH' ) || exit;
 ?>
-<div class="dir-iw">
+<div class="dir-iw" data-post-id="<?php echo (int) $card['id']; ?>">
     <div class="dir-iw__head">
         <a class="dir-iw__avatar" href="<?php echo esc_url( $card['url'] ); ?>" tabindex="-1" aria-hidden="true">
             <?php echo directory_avatar_html( $card['id'], 70 ); // phpcs:ignore ?>

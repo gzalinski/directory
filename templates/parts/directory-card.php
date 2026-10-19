@@ -7,7 +7,7 @@ defined( 'ABSPATH' ) || exit;
 
 $card = directory_card_data( get_the_ID() );
 ?>
-<article class="dir-card-row" data-latlng="<?php echo esc_attr( $card['latlng'] ); ?>">
+<article class="dir-card-row" data-post-id="<?php echo (int) $card['id']; ?>" data-latlng="<?php echo esc_attr( $card['latlng'] ); ?>">
     <a class="dir-card-row__avatar" href="<?php echo esc_url( $card['url'] ); ?>" tabindex="-1" aria-hidden="true">
         <?php echo directory_avatar_html( $card['id'], 56 ); // phpcs:ignore ?>
     </a>
@@ -33,10 +33,14 @@ $card = directory_card_data( get_the_ID() );
 
     <div class="dir-card-row__actions">
         <a class="dir-btn" href="<?php echo esc_url( $card['url'] ); ?>">View Profile</a>
-        <?php if ( $card['message_url'] ) : ?>
-            <a class="dir-btn dir-btn--outline" href="<?php echo esc_attr( $card['message_url'] ); ?>">Message Seller</a>
-        <?php else : ?>
-            <span class="dir-btn dir-btn--outline is-disabled">Message Seller</span>
+        <?php if ( $card['latlng'] ) : ?>
+            <!-- Split view only (CSS): pans the map here and opens the popup (src/archive.js). -->
+            <button type="button" class="dir-btn dir-btn--outline dir-card-row__locate" data-dir-show-location>Show Location</button>
         <?php endif; ?>
     </div>
+
+    <?php if ( $card['latlng'] ) : ?>
+        <!-- Popup copy, used if the FacetWP marker cannot be opened (e.g. still clustered). -->
+        <template class="dir-card-row__popup"><?php directory_template( 'parts/map-popup', array( 'card' => $card ) ); ?></template>
+    <?php endif; ?>
 </article>
