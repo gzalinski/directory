@@ -202,16 +202,36 @@ function init(root) {
   /* ---- FacetWP events ------------------------------------------------ */
 
   // Fires after FacetWP has parsed facet values, before the AJAX request.
+  // Clear the Proximity location (value + inputs) without a refresh.
+  function clearProximity() {
+    FWP.facets[PROX] = [];
+    root.querySelectorAll('.facetwp-facet-' + PROX + ' input').forEach((input) => {
+      if (input.type !== 'checkbox' && input.type !== 'radio') input.value = '';
+    });
+  }
+
+  // Proximity and map bounds are both location filters and FacetWP ANDs
+  // them, so "25 mi around New York" + "Los Angeles viewport" = no results.
+  // Only one of them may be active in a request:
+  //  - a new location was entered  -> it wins, the viewport is dropped;
+  //  - the map area was searched   -> the viewport wins, the location is dropped.
+  // Fires after FacetWP has parsed facet values, before the AJAX request.
   document.addEventListener('facetwp-refresh', () => {
-    if (!mapMode || typeof window.FWP_MAP === 'undefined' || !FWP_MAP.is_filtering) return;
-    // A new location search must be allowed to zoom the map: FacetWP cannot
-    // auto-zoom while map filtering is on, so drop the viewport for this
-    // request and switch filtering back on afterwards.
+    if (!hasFWP()) return;
     const prox = JSON.stringify(facetValue(PROX));
-    if (lastProx !== null && prox !== lastProx) {
-      FWP_MAP.is_filtering = false;
+    const proxChanged = lastProx !== null && prox !== lastProx;
+    const filtering = typeof window.FWP_MAP !== 'undefined' && FWP_MAP.is_filtering;
+
+    if (proxChanged && facetValue(PROX).length) {
+      if (mapMode && filtering) {
+        // Let the map zoom to the new location (FacetWP cannot auto-zoom while
+        // map filtering is on), then switch filtering back on.
+        FWP_MAP.is_filtering = false;
+        refilterAfterLoad = true;
+      }
       FWP.facets[MAP] = [];
-      refilterAfterLoad = true;
+    } else if (facetValue(MAP).length && facetValue(PROX).length) {
+      clearProximity();
     }
   });
 
@@ -223,7 +243,17 @@ function init(root) {
         setFiltering(false);
       });
       // Shared / reloaded URL that already holds map bounds: open the map view.
-      if (facetValue(MAP).length) openMap();
+      if (facetValue(MAP).length) {
+        openMap();
+        // Old links can hold both a location and map bounds (= no results):
+        // keep the viewport, drop the location.
+        if (facetValue(PROX).length) {
+          clearProximity();
+          lastProx = '[]';
+          FWP.refresh();
+          return;
+        }
+      }
     }
 
     lastProx = JSON.stringify(facetValue(PROX));

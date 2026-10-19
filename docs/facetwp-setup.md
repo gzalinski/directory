@@ -77,7 +77,8 @@ Modelled on https://facetwp.com/demo/state-parks/.
 | **View Map** | Split view: toolbar + cards + map fit one screen (no page scroll). Cards + pager scroll inside the left column; map on the right. Map filtering turns **on**: panning / zooming filters the cards. |
 | **Close Map** (same toolbar button) or Esc | Back to full-width cards; map filtering turns **off** and the listing refreshes if the viewport had filtered it. |
 | New location in split view | Filtering pauses for that request so the map can zoom to the location, then turns back on. |
-| URL with map bounds (shared link) | Page opens in split view. |
+| **Search this area** with a location entered | The map area replaces the location: the Proximity location is cleared for that search (both together would AND to "no results"). |
+| URL with map bounds (shared link) | Page opens in split view; if it also holds a location, the location is dropped. |
 | Below 992px | No room for two columns: the map shows above the cards. |
 
 Layout knobs (CSS custom properties on `.directory-archive`):
